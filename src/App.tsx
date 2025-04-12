@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Home from "./pages/Home";
 import TopicInput from "./pages/TopicInput";
-import AnalysisResults from "./pages/AnalysisResults";
+import ResultsPage from "./pages/ResultsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,7 +22,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/topic-input" element={<TopicInput />} />
-            <Route path="/analysis-results" element={<AnalysisResults />} />
+            <Route path="/results/*" element={<ResultsPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
