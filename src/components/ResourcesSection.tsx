@@ -3,6 +3,42 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FileText, Youtube, Book } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+const allVideos = [
+  {
+    topic: "Machine Learning",
+    title: "Machine Learning | What Is Machine Learning? | Introduction To Machine Learning | 2024 | Simplilearn",
+    creator: "Simplilearn",
+    url: "https://www.youtube.com/watch?v=ukzFI9rgwfU",
+    thumbnail: "https://i.ytimg.com/vi/ukzFI9rgwfU/mqdefault.jpg",
+    duration: "15:30"
+  },
+  {
+    topic: "Machine Learning",
+    title: "Machine Learning Explained in 100 Seconds",
+    creator: "Fireship",
+    url: "https://www.youtube.com/watch?v=PeMlggyqz0Y",
+    thumbnail: "https://i.ytimg.com/vi/PeMlggyqz0Y/mqdefault.jpg",
+    duration: "01:40"
+  },
+  {
+    topic: "Cloud Security",
+    title: "Cloud Security Tutorial | Cloud Security Fundamentals | Edureka",
+    creator: "Edureka",
+    url: "https://www.youtube.com/watch?v=0lw4KU5wHsk",
+    thumbnail: "https://i.ytimg.com/vi/0lw4KU5wHsk/mqdefault.jpg",
+    duration: "45:00"
+  },
+  {
+    topic: "Prompt Engineering",
+    title: "Prompt Engineering Tutorial – Master ChatGPT and LLM Responses",
+    creator: "FreeCodeCamp",
+    url: "https://www.youtube.com/watch?v=_ZvnD73m40o",
+    thumbnail: "https://i.ytimg.com/vi/_ZvnD73m40o/mqdefault.jpg",
+    duration: "30:00"
+  },
+  
+];
+
 export const ResourcesSection = ({ topic = 'JavaScript' }) => {
   const articles = [
     {
@@ -20,24 +56,7 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
       description: 'Learn how to use promises for asynchronous operations in JavaScript.',
     },
   ];
-  
-  const videos = [
-    {
-      id: 1,
-      title: 'JavaScript Promises In 10 Minutes',
-      creator: 'Web Dev Simplified',
-      url: '#',
-      duration: '10:30',
-    },
-    {
-      id: 2,
-      title: 'Async/Await in JavaScript - Full Tutorial',
-      creator: 'freeCodeCamp',
-      url: '#',
-      duration: '26:55',
-    },
-  ];
-  
+
   const roadmaps = [
     {
       id: 1,
@@ -48,6 +67,9 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
     },
   ];
 
+  // ✅ Filter videos by selected topic
+  const videos = allVideos.filter(video => video.topic === topic);
+
   return (
     <div className="space-y-6">
       <div>
@@ -56,7 +78,7 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
           Recommended resources to help you fill your knowledge gaps.
         </p>
       </div>
-      
+
       <Tabs defaultValue="articles">
         <TabsList className="mb-4">
           <TabsTrigger value="articles" className="flex items-center gap-2">
@@ -69,7 +91,8 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
             <Book className="h-4 w-4" /> Roadmaps
           </TabsTrigger>
         </TabsList>
-        
+
+        {/* Articles */}
         <TabsContent value="articles" className="space-y-4">
           {articles.map((article) => (
             <Card key={article.id}>
@@ -88,14 +111,18 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
             </Card>
           ))}
         </TabsContent>
-        
+
+        {/* Videos */}
         <TabsContent value="videos" className="space-y-4">
-          {videos.map((video) => (
-            <Card key={video.id}>
+          {videos.map((video, index) => (
+            <Card key={index}>
               <CardHeader>
                 <CardTitle>{video.title}</CardTitle>
                 <CardDescription>By {video.creator} • {video.duration}</CardDescription>
               </CardHeader>
+              <CardContent>
+                <img src={video.thumbnail} alt={video.title} className="rounded-lg mb-4 w-full max-w-sm" />
+              </CardContent>
               <CardFooter>
                 <Button variant="outline" asChild>
                   <a href={video.url} target="_blank" rel="noopener noreferrer">Watch Video</a>
@@ -103,8 +130,12 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
               </CardFooter>
             </Card>
           ))}
+          {videos.length === 0 && (
+            <p className="text-muted-foreground">No videos available for this topic.</p>
+          )}
         </TabsContent>
-        
+
+        {/* Roadmaps */}
         <TabsContent value="roadmaps" className="space-y-4">
           {roadmaps.map((roadmap) => (
             <Card key={roadmap.id}>
