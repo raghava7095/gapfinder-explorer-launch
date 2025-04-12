@@ -23,7 +23,7 @@ const TopicInput = () => {
     // Simulate API call
     setTimeout(() => {
       // In a real app, you'd pass this data to the backend
-      navigate("/analysis-results", { 
+      navigate("/results/*", { 
         state: { 
           topic,
           knowledgeInput
