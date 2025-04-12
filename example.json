@@ -1,4 +1,5 @@
-{
+[
+  {
   "input": "Topic: Machine Learning\n\nHere is what I already know:\n- Linear Regression\n- Logistic Regression\n- Confusion Matrix\n- Python basics with pandas and NumPy\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Machine Learning.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
   "output": {
     "all_topics": [
@@ -73,7 +74,7 @@
       "8. Dive into MLOps basics for real-world applications"
     ]
   }
-}
+},
 
 
 
@@ -155,7 +156,7 @@
       "10. Get hands-on with malware analysis and secure coding strategies"
     ]
   }
-}
+},
 
 
 
@@ -240,7 +241,7 @@
       "10. Prepare for a cloud certification to validate your knowledge"
     ]
   }
-}
+},
 
 
 
@@ -319,7 +320,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -394,7 +395,7 @@
       "7. Explore data quality checks and schema evolution strategies"
     ]
   }
-}
+},
 
 
 
@@ -459,7 +460,7 @@
       "6. Integrate external tools like RAG for enhanced prompting"
     ]
   }
-}
+},
 
 
 
@@ -529,7 +530,7 @@
       "8. Study Web3 UX best practices and legal regulations"
     ]
   }
-}
+},
 
 
 
@@ -599,7 +600,7 @@
       "8. Publish apps and get familiar with store requirements"
     ]
   }
-}
+},
 
 
 
@@ -671,7 +672,7 @@
       "8. Learn Infra-as-Code with Terraform and monitor pipelines in production"
     ]
   }
-}
+},
 
 
 
@@ -737,7 +738,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -799,7 +800,7 @@
       "8. Monitor cloud posture using CSPM tools"
     ]
   }
-}
+},
 
 
 
@@ -863,7 +864,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -925,7 +926,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -989,7 +990,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -1052,7 +1053,7 @@
       "8. Experiment with multi-modal prompting and assistant design"
     ]
   }
-}
+},
 
 
 
@@ -1119,7 +1120,7 @@
       "8. Test cross-chain bridges and oracle integrations"
     ]
   }
-}
+},
 
 
 
@@ -1185,7 +1186,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -1245,7 +1246,7 @@
 }
 
 
-
+,
 
 
 
@@ -1303,7 +1304,7 @@
   }
 }
 
-
+,
 
 
 {
@@ -1361,7 +1362,7 @@
 }
 
 
-
+,
 
 
 
@@ -1421,7 +1422,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -1481,7 +1482,7 @@
   }
 }
 
-
+,
 
 
 
@@ -1541,7 +1542,7 @@
   }
 }
 
-
+,
 
 
 
@@ -1600,7 +1601,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -1663,7 +1664,7 @@
 
 
 
-
+,
 
 
 
@@ -1719,8 +1720,7 @@
     ]
   }
 }
-
-
+,
 
 
 
@@ -1778,7 +1778,7 @@
     ]
   }
 }
-
+,
 
 
 
@@ -1838,7 +1838,7 @@
   }
 }
 
-
+,
 
 
 
@@ -1895,5 +1895,4 @@
       "8. Analyze domain-specific use cases: smart cities, healthcare, and industry 4.0"
     ]
   }
-}
-
+}]
