@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import TopicInput from "./pages/TopicInput";
 import ResultsPage from "./pages/ResultsPage";
 import NotFound from "./pages/NotFound";
+import AppLayout from "./components/AppLayout";
 
 const queryClient = new QueryClient();
 
