@@ -36,38 +36,76 @@ const allVideos = [
     thumbnail: "https://i.ytimg.com/vi/_ZvnD73m40o/mqdefault.jpg",
     duration: "30:00"
   },
-  
 ];
 
-export const ResourcesSection = ({ topic = 'JavaScript' }) => {
-  const articles = [
-    {
-      id: 1,
-      title: 'Understanding JavaScript Closures',
-      source: 'MDN Web Docs',
-      url: '#',
-      description: 'A comprehensive guide to JavaScript closures and their practical applications.',
+const subtopicDocumentation = [
+  {
+    subtopic: "Supervised Learning",
+    github: {
+      repo: "scikit-learn/scikit-learn",
+      url: "https://github.com/scikit-learn/scikit-learn"
     },
-    {
-      id: 2,
-      title: 'Promises in JavaScript: An Introduction',
-      source: 'JavaScript.info',
-      url: '#',
-      description: 'Learn how to use promises for asynchronous operations in JavaScript.',
+    devdocs: "https://devdocs.io/#q=supervised learning",
+    readme: "Scikit-learn is a machine learning library in Python that supports various supervised learning algorithms like decision trees, support vector machines, and linear models..."
+  },
+  {
+    subtopic: "Unsupervised Learning",
+    github: {
+      repo: "scikit-learn/scikit-learn",
+      url: "https://github.com/scikit-learn/scikit-learn"
     },
-  ];
+    devdocs: "https://devdocs.io/#q=unsupervised learning",
+    readme: "This library includes unsupervised learning methods such as clustering (k-means, DBSCAN) and dimensionality reduction (PCA, t-SNE)..."
+  },
+  {
+    subtopic: "Regression Analysis",
+    github: {
+      repo: "jbrownlee/Datasets",
+      url: "https://github.com/jbrownlee/Datasets"
+    },
+    devdocs: "https://devdocs.io/#q=regression analysis",
+    readme: "A collection of datasets used in regression modeling tutorials, helpful for building, testing, and evaluating regression models..."
+  },
+  {
+    subtopic: "Classification",
+    github: {
+      repo: "tensorflow/models",
+      url: "https://github.com/tensorflow/models"
+    },
+    devdocs: "https://devdocs.io/#q=classification",
+    readme: "TensorFlow Models provides sample models for image and text classification tasks using neural networks..."
+  },
+  {
+    subtopic: "Deep Learning",
+    github: {
+      repo: "keras-team/keras",
+      url: "https://github.com/keras-team/keras"
+    },
+    devdocs: "https://devdocs.io/#q=deep learning",
+    readme: "Keras is a high-level neural networks API that supports fast experimentation with deep learning models in TensorFlow..."
+  },
+  {
+    subtopic: "Model Evaluation",
+    github: {
+      repo: "scikit-learn/scikit-learn",
+      url: "https://github.com/scikit-learn/scikit-learn"
+    },
+    devdocs: "https://devdocs.io/#q=model evaluation",
+    readme: "Scikit-learn includes tools for evaluating model performance such as cross-validation, precision/recall scoring, ROC curves, and confusion matrices..."
+  }
+];
 
-  const roadmaps = [
-    {
-      id: 1,
-      title: 'JavaScript Developer Roadmap 2023',
-      description: 'A step-by-step guide to becoming a JavaScript developer.',
-      steps: 12,
-      url: '#',
-    },
-  ];
+const roadmaps = [
+  {
+    id: 1,
+    title: 'Machine Learning Roadmap 2024',
+    description: 'A step-by-step guide to becoming a Machine Learning Engineer.',
+    steps: 18,
+    url: '#',
+  },
+];
 
-  // ✅ Filter videos by selected topic
+export const ResourcesSection = ({ topic = 'Machine Learning' }) => {
   const videos = allVideos.filter(video => video.topic === topic);
 
   return (
@@ -92,27 +130,36 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
           </TabsTrigger>
         </TabsList>
 
-        {/* Articles */}
+        {/* Articles Tab */}
         <TabsContent value="articles" className="space-y-4">
-          {articles.map((article) => (
-            <Card key={article.id}>
+          {subtopicDocumentation.map((doc, idx) => (
+            <Card key={idx}>
               <CardHeader>
-                <CardTitle>{article.title}</CardTitle>
-                <CardDescription>Source: {article.source}</CardDescription>
+                <CardTitle>{doc.subtopic}</CardTitle>
+                <CardDescription>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mt-2">
+                    <a href={doc.github.url} target="_blank" rel="noopener noreferrer" className="underline text-sm text-blue-500">
+                      GitHub: {doc.github.repo}
+                    </a>
+                    <a href={doc.devdocs} target="_blank" rel="noopener noreferrer" className="underline text-sm text-blue-500">
+                      DevDocs
+                    </a>
+                  </div>
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>{article.description}</p>
+                <p>{doc.readme}</p>
               </CardContent>
               <CardFooter>
                 <Button variant="outline" asChild>
-                  <a href={article.url} target="_blank" rel="noopener noreferrer">Read Article</a>
+                  <a href={doc.github.url} target="_blank" rel="noopener noreferrer">Explore on GitHub</a>
                 </Button>
               </CardFooter>
             </Card>
           ))}
         </TabsContent>
 
-        {/* Videos */}
+        {/* Videos Tab */}
         <TabsContent value="videos" className="space-y-4">
           {videos.map((video, index) => (
             <Card key={index}>
@@ -135,7 +182,7 @@ export const ResourcesSection = ({ topic = 'JavaScript' }) => {
           )}
         </TabsContent>
 
-        {/* Roadmaps */}
+        {/* Roadmaps Tab */}
         <TabsContent value="roadmaps" className="space-y-4">
           {roadmaps.map((roadmap) => (
             <Card key={roadmap.id}>
