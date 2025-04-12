@@ -1,4 +1,5 @@
-{
+[
+  {
   "input": "Topic: Machine Learning\n\nHere is what I already know:\n- Linear Regression\n- Logistic Regression\n- Confusion Matrix\n- Python basics with pandas and NumPy\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Machine Learning.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
   "output": {
     "all_topics": [
@@ -73,4 +74,1825 @@
       "8. Dive into MLOps basics for real-world applications"
     ]
   }
+},
+
+
+
+
+
+
+{
+  "input": "Topic: Cybersecurity\n\nHere is what I already know:\n- Basic knowledge of networks\n- Understanding of firewalls\n- Familiar with antivirus tools\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Cybersecurity.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Network Security",
+      "Web Application Security",
+      "Authentication & Authorization",
+      "Cryptography",
+      "Public Key Infrastructure (PKI)",
+      "Vulnerability Assessment",
+      "Penetration Testing",
+      "Security Operations Center (SOC)",
+      "SIEM Tools (Splunk, ELK)",
+      "Incident Response",
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Secure Coding Practices",
+      "OWASP Top 10",
+      "Cloud Security",
+      "Zero Trust Architecture",
+      "Access Control Models",
+      "Threat Intelligence",
+      "Social Engineering",
+      "Security Compliance (ISO, NIST, GDPR)",
+      "Wireless Security",
+      "Forensics & Investigation",
+      "Risk Management",
+      "Security Audits",
+      "Cybersecurity Tools (Nmap, Metasploit, Wireshark)"
+    ],
+    "covered_topics": [
+      "Basic knowledge of networks",
+      "Understanding of firewalls",
+      "Familiar with antivirus tools"
+    ],
+    "gap_topics": [
+      "Network Security (Advanced)",
+      "Web Application Security",
+      "Authentication & Authorization",
+      "Cryptography",
+      "Public Key Infrastructure (PKI)",
+      "Vulnerability Assessment",
+      "Penetration Testing",
+      "Security Operations Center (SOC)",
+      "SIEM Tools (Splunk, ELK)",
+      "Incident Response",
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Secure Coding Practices",
+      "OWASP Top 10",
+      "Cloud Security",
+      "Zero Trust Architecture",
+      "Access Control Models",
+      "Threat Intelligence",
+      "Social Engineering",
+      "Security Compliance (ISO, NIST, GDPR)",
+      "Wireless Security",
+      "Forensics & Investigation",
+      "Risk Management",
+      "Security Audits",
+      "Cybersecurity Tools (Nmap, Metasploit, Wireshark)"
+    ],
+    "study_roadmap": [
+      "1. Deepen understanding of network security and common protocols",
+      "2. Study web application vulnerabilities using the OWASP Top 10",
+      "3. Learn basics of cryptography and PKI",
+      "4. Practice vulnerability scanning and ethical hacking techniques",
+      "5. Set up a virtual lab for penetration testing using tools like Metasploit and Nmap",
+      "6. Explore cloud security practices and zero trust architecture",
+      "7. Understand threat detection using SIEM tools",
+      "8. Study incident response and digital forensics workflows",
+      "9. Learn about compliance and governance frameworks",
+      "10. Get hands-on with malware analysis and secure coding strategies"
+    ]
+  }
+},
+
+
+
+
+
+
+
+
+
+{
+  "input": "Topic: Cloud Computing\n\nHere is what I already know:\n- Basic knowledge of virtualization\n- Familiar with AWS EC2 and S3\n- Some experience using Docker\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Cloud Computing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Cloud Service Models (IaaS, PaaS, SaaS)",
+      "Cloud Deployment Models (Public, Private, Hybrid)",
+      "Serverless Computing",
+      "Kubernetes & Container Orchestration",
+      "Infrastructure as Code (Terraform, CloudFormation)",
+      "CI/CD in Cloud",
+      "Load Balancing & Auto Scaling",
+      "Identity & Access Management (IAM)",
+      "Monitoring & Logging (CloudWatch, Datadog)",
+      "Cost Optimization Strategies",
+      "Cloud Networking (VPC, Subnets, Gateways)",
+      "Disaster Recovery & Backups",
+      "Cloud Security Best Practices",
+      "Multi-Cloud & Hybrid Cloud Architecture",
+      "Managed Database Services (RDS, Firestore, DynamoDB)",
+      "Message Queues (SQS, Pub/Sub)",
+      "Content Delivery Networks (CDN)",
+      "Data Lakes & Big Data Services",
+      "Edge Computing",
+      "Cloud AI & ML Services",
+      "Compliance & Governance in Cloud",
+      "Custom Domain & SSL",
+      "Service-Level Agreements (SLAs)",
+      "Cloud Billing & Cost Estimation",
+      "Cloud Certification Paths (AWS, Azure, GCP)"
+    ],
+    "covered_topics": [
+      "Basic knowledge of virtualization",
+      "Familiar with AWS EC2 and S3",
+      "Some experience using Docker"
+    ],
+    "gap_topics": [
+      "Cloud Service Models (IaaS, PaaS, SaaS)",
+      "Cloud Deployment Models (Public, Private, Hybrid)",
+      "Serverless Computing",
+      "Kubernetes & Container Orchestration",
+      "Infrastructure as Code (Terraform, CloudFormation)",
+      "CI/CD in Cloud",
+      "Load Balancing & Auto Scaling",
+      "Identity & Access Management (IAM)",
+      "Monitoring & Logging (CloudWatch, Datadog)",
+      "Cost Optimization Strategies",
+      "Cloud Networking (VPC, Subnets, Gateways)",
+      "Disaster Recovery & Backups",
+      "Cloud Security Best Practices",
+      "Multi-Cloud & Hybrid Cloud Architecture",
+      "Managed Database Services (RDS, Firestore, DynamoDB)",
+      "Message Queues (SQS, Pub/Sub)",
+      "Content Delivery Networks (CDN)",
+      "Data Lakes & Big Data Services",
+      "Edge Computing",
+      "Cloud AI & ML Services",
+      "Compliance & Governance in Cloud",
+      "Custom Domain & SSL",
+      "Service-Level Agreements (SLAs)",
+      "Cloud Billing & Cost Estimation",
+      "Cloud Certification Paths (AWS, Azure, GCP)"
+    ],
+    "study_roadmap": [
+      "1. Understand core cloud service and deployment models",
+      "2. Learn Kubernetes and container orchestration tools",
+      "3. Explore Infrastructure as Code using Terraform or CloudFormation",
+      "4. Set up CI/CD pipelines using cloud-native tools",
+      "5. Study IAM, VPC networking, and security strategies",
+      "6. Practice deploying serverless functions and auto-scaling applications",
+      "7. Learn how to monitor, log, and optimize cloud resources",
+      "8. Study managed services, data lakes, and messaging systems",
+      "9. Explore multi-cloud setups and hybrid architectures",
+      "10. Prepare for a cloud certification to validate your knowledge"
+    ]
+  }
+},
+
+
+
+
+{
+  "input": "Topic: DevOps\n\nHere is what I already know:\n- Basic Linux commands\n- Familiar with Git and GitHub\n- Some understanding of Docker\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under DevOps.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Linux & Shell Scripting",
+      "Version Control (Git)",
+      "CI/CD Pipelines",
+      "Docker & Containerization",
+      "Kubernetes Basics",
+      "Infrastructure as Code (Terraform, Ansible)",
+      "Monitoring & Alerting (Prometheus, Grafana)",
+      "Logging Systems (ELK, Fluentd)",
+      "Cloud Providers (AWS, Azure, GCP)",
+      "Configuration Management",
+      "Secrets Management (Vault, SOPS)",
+      "Service Discovery & Load Balancing",
+      "Build Automation Tools (Maven, Gradle)",
+      "Artifact Repositories (Nexus, Artifactory)",
+      "Security & Compliance in DevOps",
+      "Blue-Green & Canary Deployments",
+      "Agile & DevOps Culture",
+      "Release Strategies",
+      "Rollback Mechanisms",
+      "Chaos Engineering",
+      "Backup & Recovery",
+      "Networking Basics for DevOps",
+      "Observability Principles",
+      "Incident Response",
+      "DevSecOps Practices"
+    ],
+    "covered_topics": [
+      "Basic Linux commands",
+      "Familiar with Git and GitHub",
+      "Some understanding of Docker"
+    ],
+    "gap_topics": [
+      "Linux & Shell Scripting (Advanced)",
+      "CI/CD Pipelines",
+      "Kubernetes Basics",
+      "Infrastructure as Code (Terraform, Ansible)",
+      "Monitoring & Alerting (Prometheus, Grafana)",
+      "Logging Systems (ELK, Fluentd)",
+      "Cloud Providers (AWS, Azure, GCP)",
+      "Configuration Management",
+      "Secrets Management (Vault, SOPS)",
+      "Service Discovery & Load Balancing",
+      "Build Automation Tools (Maven, Gradle)",
+      "Artifact Repositories (Nexus, Artifactory)",
+      "Security & Compliance in DevOps",
+      "Blue-Green & Canary Deployments",
+      "Agile & DevOps Culture",
+      "Release Strategies",
+      "Rollback Mechanisms",
+      "Chaos Engineering",
+      "Backup & Recovery",
+      "Networking Basics for DevOps",
+      "Observability Principles",
+      "Incident Response",
+      "DevSecOps Practices"
+    ],
+    "study_roadmap": [
+      "1. Strengthen Linux shell scripting and automation skills",
+      "2. Learn CI/CD workflows using Jenkins, GitHub Actions, or GitLab CI",
+      "3. Explore Kubernetes fundamentals and cluster management",
+      "4. Practice Infrastructure as Code with Terraform or Ansible",
+      "5. Set up logging and monitoring with Prometheus and ELK stack",
+      "6. Understand cloud deployments and configuration management tools",
+      "7. Dive into deployment strategies like blue-green and canary",
+      "8. Study incident response, observability, and chaos engineering principles",
+      "9. Explore DevSecOps practices and security automation",
+      "10. Work on a full DevOps pipeline project for hands-on experience"
+    ]
+  }
 }
+,
+
+
+
+{
+  "input": "Topic: Data Engineering\n\nHere is what I already know:\n- SQL basics\n- Python scripting\n- Basic ETL concepts\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Data Engineering.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Advanced SQL",
+      "Data Warehousing",
+      "Data Lakes",
+      "ETL & ELT Pipelines",
+      "Batch vs Stream Processing",
+      "Apache Airflow",
+      "Apache Spark",
+      "Kafka & Real-Time Data",
+      "Cloud Data Platforms (BigQuery, Redshift, Snowflake)",
+      "Data Modeling",
+      "Data Partitioning",
+      "Schema Evolution",
+      "Data Orchestration",
+      "Data Quality & Validation",
+      "Data Lineage",
+      "Data Governance",
+      "Security & Encryption",
+      "Monitoring & Logging",
+      "Data APIs & REST",
+      "CI/CD for Data Pipelines",
+      "Infrastructure as Code",
+      "Python for Data Engineering",
+      "Version Control (Git)",
+      "Containerization (Docker)",
+      "Workflow Automation"
+    ],
+    "covered_topics": [
+      "SQL basics",
+      "Python scripting",
+      "Basic ETL concepts"
+    ],
+    "gap_topics": [
+      "Advanced SQL",
+      "Data Warehousing",
+      "Data Lakes",
+      "ETL & ELT Pipelines (Advanced)",
+      "Batch vs Stream Processing",
+      "Apache Airflow",
+      "Apache Spark",
+      "Kafka & Real-Time Data",
+      "Cloud Data Platforms (BigQuery, Redshift, Snowflake)",
+      "Data Modeling",
+      "Data Partitioning",
+      "Schema Evolution",
+      "Data Orchestration",
+      "Data Quality & Validation",
+      "Data Lineage",
+      "Data Governance",
+      "Security & Encryption",
+      "Monitoring & Logging",
+      "Data APIs & REST",
+      "CI/CD for Data Pipelines",
+      "Infrastructure as Code",
+      "Version Control (Git)",
+      "Containerization (Docker)",
+      "Workflow Automation"
+    ],
+    "study_roadmap": [
+      "1. Deep dive into SQL, data modeling, and warehousing concepts",
+      "2. Learn Apache Airflow for orchestration and scheduling",
+      "3. Work with real-time systems using Kafka and Spark",
+      "4. Practice building data pipelines on cloud platforms",
+      "5. Understand data governance, lineage, and security best practices",
+      "6. Set up CI/CD and automation for pipelines",
+      "7. Explore data quality checks and schema evolution strategies"
+    ]
+  }
+},
+
+
+
+
+{
+  "input": "Topic: Prompt Engineering\n\nHere is what I already know:\n- Basic understanding of ChatGPT\n- Tried a few prompts for text generation\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Prompt Engineering.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Prompt Design Patterns",
+      "Chain-of-Thought Prompting",
+      "Zero-shot & Few-shot Learning",
+      "Context Injection",
+      "Role-based Prompts",
+      "Prompt Templates",
+      "Function Calling",
+      "Tools like LangChain",
+      "Evaluation of Prompt Effectiveness",
+      "Token Optimization",
+      "Multi-modal Prompting",
+      "Conversational Memory",
+      "Handling Hallucinations",
+      "Model Limitations",
+      "Prompt Testing Frameworks",
+      "Tool-Augmented Agents",
+      "RAG (Retrieval-Augmented Generation)",
+      "System vs User Prompts",
+      "Embedding-based Search",
+      "Tool Use in Prompts (Google, Calculator, Code Runner)"
+    ],
+    "covered_topics": [
+      "Basic understanding of ChatGPT",
+      "Tried a few prompts for text generation"
+    ],
+    "gap_topics": [
+      "Prompt Design Patterns",
+      "Chain-of-Thought Prompting",
+      "Zero-shot & Few-shot Learning",
+      "Context Injection",
+      "Role-based Prompts",
+      "Prompt Templates",
+      "Function Calling",
+      "Tools like LangChain",
+      "Evaluation of Prompt Effectiveness",
+      "Token Optimization",
+      "Multi-modal Prompting",
+      "Conversational Memory",
+      "Handling Hallucinations",
+      "Model Limitations",
+      "Prompt Testing Frameworks",
+      "Tool-Augmented Agents",
+      "RAG (Retrieval-Augmented Generation)",
+      "System vs User Prompts",
+      "Embedding-based Search",
+      "Tool Use in Prompts (Google, Calculator, Code Runner)"
+    ],
+    "study_roadmap": [
+      "1. Study different prompt patterns (e.g., Chain-of-Thought)",
+      "2. Learn few-shot and zero-shot prompting techniques",
+      "3. Explore LangChain and other prompt orchestration tools",
+      "4. Understand how memory, token limits, and context work",
+      "5. Evaluate prompts using test cases and feedback",
+      "6. Integrate external tools like RAG for enhanced prompting"
+    ]
+  }
+},
+
+
+
+
+
+{
+  "input": "Topic: Web3\n\nHere is what I already know:\n- Basics of blockchain\n- Ethereum smart contracts\n- MetaMask integration\n- Solidity basics\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Web3.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Decentralized Applications (dApps)",
+      "Ethereum Virtual Machine (EVM)",
+      "Solidity (Advanced)",
+      "Smart Contract Security",
+      "Gas Optimization",
+      "Oracles (Chainlink)",
+      "Web3.js / Ethers.js",
+      "IPFS & Decentralized Storage",
+      "NFT Standards (ERC-721, ERC-1155)",
+      "DeFi Protocols",
+      "Token Standards (ERC-20)",
+      "DAOs & Governance",
+      "Layer 2 Solutions (Optimism, Arbitrum)",
+      "ZK Rollups & Validiums",
+      "Wallet Connect Protocol",
+      "Blockchain Indexing (The Graph)",
+      "Cross-chain Communication",
+      "Web3 UX/UI Design",
+      "Regulations & Compliance",
+      "Smart Contract Testing"
+    ],
+    "covered_topics": [
+      "Blockchain Basics",
+      "Ethereum Smart Contracts",
+      "MetaMask Integration",
+      "Solidity Basics"
+    ],
+    "gap_topics": [
+      "Decentralized Applications (dApps)",
+      "Ethereum Virtual Machine (EVM)",
+      "Solidity (Advanced)",
+      "Smart Contract Security",
+      "Gas Optimization",
+      "Oracles (Chainlink)",
+      "Web3.js / Ethers.js",
+      "IPFS & Decentralized Storage",
+      "NFT Standards (ERC-721, ERC-1155)",
+      "DeFi Protocols",
+      "Token Standards (ERC-20)",
+      "DAOs & Governance",
+      "Layer 2 Solutions (Optimism, Arbitrum)",
+      "ZK Rollups & Validiums",
+      "Wallet Connect Protocol",
+      "Blockchain Indexing (The Graph)",
+      "Cross-chain Communication",
+      "Web3 UX/UI Design",
+      "Regulations & Compliance",
+      "Smart Contract Testing"
+    ],
+    "study_roadmap": [
+      "1. Explore dApp architecture and practice building frontends using Web3.js or Ethers.js",
+      "2. Master advanced Solidity and common security vulnerabilities",
+      "3. Learn about oracles and how external data is brought on-chain",
+      "4. Dive into DeFi protocols and understand token standards",
+      "5. Explore Layer 2 scaling solutions and interoperability strategies",
+      "6. Practice smart contract testing with Hardhat and Foundry",
+      "7. Deploy NFT collections using ERC-721 or ERC-1155",
+      "8. Study Web3 UX best practices and legal regulations"
+    ]
+  }
+},
+
+
+
+
+
+
+{
+  "input": "Topic: AR/VR\n\nHere is what I already know:\n- Unity basics\n- Oculus Quest setup\n- 3D asset importing\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under AR/VR.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "3D Graphics Fundamentals",
+      "Coordinate Systems & Transformations",
+      "Unity (Advanced)",
+      "Unreal Engine (Basics)",
+      "XR SDKs (AR Foundation, MRTK)",
+      "Device Deployment (Quest, HoloLens)",
+      "Interaction Design",
+      "Spatial Audio",
+      "Scene Optimization",
+      "Networking in VR",
+      "Hand Tracking & Controllers",
+      "AR Markers & SLAM",
+      "World Anchors & Mapping",
+      "Gesture Recognition",
+      "Multiplayer VR",
+      "UX Principles for AR/VR",
+      "Shader Programming",
+      "C# Scripting for Interaction",
+      "Performance Profiling",
+      "Publishing to App Stores"
+    ],
+    "covered_topics": [
+      "Unity Basics",
+      "Oculus Quest Setup",
+      "3D Asset Importing"
+    ],
+    "gap_topics": [
+      "3D Graphics Fundamentals",
+      "Coordinate Systems & Transformations",
+      "Unity (Advanced)",
+      "Unreal Engine (Basics)",
+      "XR SDKs (AR Foundation, MRTK)",
+      "Device Deployment (Quest, HoloLens)",
+      "Interaction Design",
+      "Spatial Audio",
+      "Scene Optimization",
+      "Networking in VR",
+      "Hand Tracking & Controllers",
+      "AR Markers & SLAM",
+      "World Anchors & Mapping",
+      "Gesture Recognition",
+      "Multiplayer VR",
+      "UX Principles for AR/VR",
+      "Shader Programming",
+      "C# Scripting for Interaction",
+      "Performance Profiling",
+      "Publishing to App Stores"
+    ],
+    "study_roadmap": [
+      "1. Advance Unity skills with physics, animations, and scripting",
+      "2. Explore AR Foundation and develop cross-platform AR apps",
+      "3. Learn interaction techniques for immersive UX",
+      "4. Practice deploying to multiple XR devices",
+      "5. Implement spatial audio and optimize performance",
+      "6. Dive into networking for multiplayer experiences",
+      "7. Prototype with gesture and hand tracking features",
+      "8. Publish apps and get familiar with store requirements"
+    ]
+  }
+},
+
+
+
+
+
+
+
+
+{
+  "input": "Topic: Data Engineering\n\nHere is what I already know:\n- Basics of SQL\n- Writing ETL pipelines using Python\n- Using Pandas for data transformation\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Data Engineering.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Data Modeling",
+      "Data Warehousing",
+      "Batch vs Stream Processing",
+      "Distributed Systems",
+      "Airflow & Workflow Orchestration",
+      "Data Lakes",
+      "Apache Spark",
+      "Apache Kafka",
+      "Delta Lake / Iceberg",
+      "Schema Design",
+      "Data Lineage",
+      "Data Governance",
+      "Data Quality",
+      "Cloud Platforms (AWS/GCP/Azure)",
+      "BigQuery / Redshift / Snowflake",
+      "Infrastructure as Code (Terraform)",
+      "CI/CD for Data Pipelines",
+      "Monitoring & Logging",
+      "Parquet / Avro / ORC formats",
+      "Docker for Pipelines"
+    ],
+    "covered_topics": [
+      "Basics of SQL",
+      "ETL pipelines using Python",
+      "Pandas for data transformation"
+    ],
+    "gap_topics": [
+      "Data Modeling",
+      "Data Warehousing",
+      "Batch vs Stream Processing",
+      "Distributed Systems",
+      "Airflow & Workflow Orchestration",
+      "Data Lakes",
+      "Apache Spark",
+      "Apache Kafka",
+      "Delta Lake / Iceberg",
+      "Schema Design",
+      "Data Lineage",
+      "Data Governance",
+      "Data Quality",
+      "Cloud Platforms (AWS/GCP/Azure)",
+      "BigQuery / Redshift / Snowflake",
+      "Infrastructure as Code (Terraform)",
+      "CI/CD for Data Pipelines",
+      "Monitoring & Logging",
+      "Parquet / Avro / ORC formats",
+      "Docker for Pipelines"
+    ],
+    "study_roadmap": [
+      "1. Deepen understanding of Data Modeling and Warehousing concepts",
+      "2. Learn Apache Spark and batch/stream data processing techniques",
+      "3. Explore Kafka for real-time ingestion pipelines",
+      "4. Use orchestration tools like Airflow to automate ETL workflows",
+      "5. Work with cloud-based warehouses like Snowflake or BigQuery",
+      "6. Implement data quality checks and learn about lineage tracking",
+      "7. Build and deploy pipelines using Docker and CI/CD workflows",
+      "8. Learn Infra-as-Code with Terraform and monitor pipelines in production"
+    ]
+  }
+},
+
+
+
+
+
+
+{
+  "input": "Topic: Web3 Development\n\nHere is what I already know:\n- Basics of blockchain\n- Smart contracts using Solidity\n- Connecting MetaMask to frontend\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Web3.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Smart Contracts",
+      "Solidity Deep Dive",
+      "Hardhat / Foundry",
+      "Ethers.js / Web3.js",
+      "IPFS & Decentralized Storage",
+      "Ethereum & Layer 2s",
+      "DeFi Protocols",
+      "DAOs",
+      "NFT Standards (ERC-721, ERC-1155)",
+      "Smart Contract Audits",
+      "Security in Web3",
+      "Web3 UX Design",
+      "Cross-chain Bridges",
+      "Gas Optimization",
+      "Zero-Knowledge Proofs",
+      "Chainlink & Oracles",
+      "Event Logging",
+      "Governance Mechanisms"
+    ],
+    "covered_topics": [
+      "Blockchain basics",
+      "Smart contracts using Solidity",
+      "Connecting MetaMask to frontend"
+    ],
+    "gap_topics": [
+      "Solidity Deep Dive",
+      "Hardhat / Foundry",
+      "Ethers.js / Web3.js",
+      "IPFS & Decentralized Storage",
+      "Ethereum & Layer 2s",
+      "DeFi Protocols",
+      "DAOs",
+      "NFT Standards (ERC-721, ERC-1155)",
+      "Smart Contract Audits",
+      "Security in Web3",
+      "Web3 UX Design",
+      "Cross-chain Bridges",
+      "Gas Optimization",
+      "Zero-Knowledge Proofs",
+      "Chainlink & Oracles",
+      "Event Logging",
+      "Governance Mechanisms"
+    ],
+    "study_roadmap": [
+      "1. Master Solidity and development tools like Hardhat",
+      "2. Learn IPFS and decentralized storage systems",
+      "3. Understand Layer 2 scaling solutions",
+      "4. Dive into DeFi protocols and DAO architecture",
+      "5. Study Web3 UX and secure smart contract design",
+      "6. Implement oracles and logging with Chainlink",
+      "7. Explore ZK-proofs and gas optimizations",
+      "8. Learn governance, auditing, and multi-chain deployments"
+    ]
+  }
+}
+,
+
+
+
+{
+  "input": "Topic: Cloud Security\n\nHere is what I already know:\n- IAM basics in AWS\n- Encryption at rest and in transit\n- Using security groups in EC2\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Cloud Security.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Shared Responsibility Model",
+      "Identity & Access Management (IAM)",
+      "Key Management Services (KMS)",
+      "Security in VPC",
+      "Firewall & Network ACLs",
+      "SIEM & Threat Detection",
+      "CloudTrail & GuardDuty",
+      "Data Loss Prevention (DLP)",
+      "Compliance (SOC2, HIPAA, GDPR)",
+      "Secrets Management",
+      "Vulnerability Scanning",
+      "Container Security",
+      "Policy as Code (OPA/Terraform)",
+      "Least Privilege Principle",
+      "Incident Response in Cloud",
+      "Security Automation",
+      "Cloud Security Posture Management (CSPM)",
+      "Zero Trust Architecture"
+    ],
+    "covered_topics": [
+      "IAM basics in AWS",
+      "Encryption at rest and in transit",
+      "Security groups in EC2"
+    ],
+    "gap_topics": [
+      "Shared Responsibility Model",
+      "Key Management Services (KMS)",
+      "Security in VPC",
+      "Firewall & Network ACLs",
+      "SIEM & Threat Detection",
+      "CloudTrail & GuardDuty",
+      "Data Loss Prevention (DLP)",
+      "Compliance (SOC2, HIPAA, GDPR)",
+      "Secrets Management",
+      "Vulnerability Scanning",
+      "Container Security",
+      "Policy as Code (OPA/Terraform)",
+      "Least Privilege Principle",
+      "Incident Response in Cloud",
+      "Security Automation",
+      "Cloud Security Posture Management (CSPM)",
+      "Zero Trust Architecture"
+    ],
+    "study_roadmap": [
+      "1. Understand cloud shared responsibility and compliance models",
+      "2. Dive deeper into VPC security, NACLs, and KMS",
+      "3. Explore SIEM tools like GuardDuty and CloudTrail",
+      "4. Implement DLP strategies and container scanning",
+      "5. Use policy as code for access control and auditing",
+      "6. Practice secrets management and zero trust design",
+      "7. Automate cloud security checks and incident response",
+      "8. Monitor cloud posture using CSPM tools"
+    ]
+  }
+},
+
+
+
+
+
+{
+  "input": "Topic: Computer Vision\n\nHere is what I already know:\n- Image classification\n- OpenCV basics\n- Grayscale and color conversions\n- Basic CNNs\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Computer Vision.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Image Processing Fundamentals",
+      "Convolutional Neural Networks",
+      "Data Augmentation",
+      "Object Detection (YOLO, SSD)",
+      "Semantic Segmentation",
+      "Instance Segmentation",
+      "Transfer Learning",
+      "Optical Flow",
+      "Image Captioning",
+      "Pose Estimation",
+      "Facial Recognition",
+      "Image Generation (GANs)",
+      "Edge Detection",
+      "Computer Vision with Transformers",
+      "Model Deployment with OpenCV/Docker",
+      "Visual SLAM",
+      "Dataset Annotation Tools"
+    ],
+    "covered_topics": [
+      "Image classification",
+      "OpenCV basics",
+      "Grayscale and color conversions",
+      "Basic CNNs"
+    ],
+    "gap_topics": [
+      "Image Processing Fundamentals",
+      "Data Augmentation",
+      "Object Detection (YOLO, SSD)",
+      "Semantic Segmentation",
+      "Instance Segmentation",
+      "Transfer Learning",
+      "Optical Flow",
+      "Image Captioning",
+      "Pose Estimation",
+      "Facial Recognition",
+      "Image Generation (GANs)",
+      "Edge Detection",
+      "Computer Vision with Transformers",
+      "Model Deployment with OpenCV/Docker",
+      "Visual SLAM",
+      "Dataset Annotation Tools"
+    ],
+    "study_roadmap": [
+      "1. Solidify understanding of image processing fundamentals and edge detection techniques",
+      "2. Learn modern object detection models like YOLO and SSD",
+      "3. Explore semantic and instance segmentation methods",
+      "4. Practice transfer learning using pretrained vision models",
+      "5. Learn facial recognition and pose estimation methods",
+      "6. Dive into GANs and computer vision applications in generation",
+      "7. Deploy models using Docker/OpenCV",
+      "8. Try annotation tools for custom datasets"
+    ]
+  }
+}
+,
+
+
+
+
+
+{
+  "input": "Topic: Data Warehousing\n\nHere is what I already know:\n- Basics of SQL\n- ETL process conceptually\n- Star and Snowflake schema overview\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Data Warehousing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Data Modeling (Star, Snowflake, Galaxy)",
+      "ETL and ELT Tools",
+      "Dimensional Modeling",
+      "Data Lake Architecture",
+      "Data Marts",
+      "OLAP vs OLTP",
+      "Data Integration",
+      "Metadata Management",
+      "Data Governance",
+      "Slowly Changing Dimensions",
+      "Partitioning and Sharding",
+      "Columnar Storage",
+      "Cloud Warehousing (BigQuery, Redshift, Snowflake)",
+      "Ingestion Pipelines",
+      "CDC (Change Data Capture)",
+      "Data Vault Modeling"
+    ],
+    "covered_topics": [
+      "Basics of SQL",
+      "ETL process conceptually",
+      "Star and Snowflake schema overview"
+    ],
+    "gap_topics": [
+      "Data Modeling (Star, Snowflake, Galaxy)",
+      "ETL and ELT Tools",
+      "Dimensional Modeling",
+      "Data Lake Architecture",
+      "Data Marts",
+      "OLAP vs OLTP",
+      "Data Integration",
+      "Metadata Management",
+      "Data Governance",
+      "Slowly Changing Dimensions",
+      "Partitioning and Sharding",
+      "Columnar Storage",
+      "Cloud Warehousing (BigQuery, Redshift, Snowflake)",
+      "Ingestion Pipelines",
+      "CDC (Change Data Capture)",
+      "Data Vault Modeling"
+    ],
+    "study_roadmap": [
+      "1. Dive deeper into ETL vs ELT and hands-on tools (Airflow, dbt)",
+      "2. Learn dimensional modeling strategies and slowly changing dimensions",
+      "3. Explore cloud data warehouse platforms like BigQuery and Snowflake",
+      "4. Understand OLAP cubes, OLTP use cases, and data marts",
+      "5. Implement partitioning and sharding for performance",
+      "6. Learn metadata management and governance principles",
+      "7. Try ingestion techniques with CDC and data pipelines",
+      "8. Study data vault modeling for modern warehousing needs"
+    ]
+  }
+}
+,
+
+
+
+
+
+{
+  "input": "Topic: Augmented Reality (AR)\n\nHere is what I already know:\n- Basics of AR vs VR\n- Used AR filters in Spark AR\n- Tried ARKit tutorials\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Augmented Reality.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "AR Foundations",
+      "Marker-based AR",
+      "Markerless AR",
+      "AR SDKs (ARCore, ARKit)",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "3D Modeling for AR",
+      "Unity with AR Foundation",
+      "Scene Understanding",
+      "AR User Interaction Design",
+      "AR Cloud & Anchors",
+      "AR Development Tools (8thWall, ZapWorks)",
+      "Geolocation-based AR",
+      "Gesture Recognition",
+      "AR Optimization Techniques",
+      "Real-time Rendering",
+      "Deploying AR to Web and Mobile",
+      "Ethics and UX in AR"
+    ],
+    "covered_topics": [
+      "Basics of AR vs VR",
+      "Used AR filters in Spark AR",
+      "Tried ARKit tutorials"
+    ],
+    "gap_topics": [
+      "AR Foundations",
+      "Marker-based AR",
+      "Markerless AR",
+      "AR SDKs (ARCore, ARKit - Intermediate)",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "3D Modeling for AR",
+      "Unity with AR Foundation",
+      "Scene Understanding",
+      "AR User Interaction Design",
+      "AR Cloud & Anchors",
+      "AR Development Tools (8thWall, ZapWorks)",
+      "Geolocation-based AR",
+      "Gesture Recognition",
+      "AR Optimization Techniques",
+      "Real-time Rendering",
+      "Deploying AR to Web and Mobile",
+      "Ethics and UX in AR"
+    ],
+    "study_roadmap": [
+      "1. Learn the theory behind marker-based and markerless AR",
+      "2. Practice using Unity with AR Foundation for cross-platform development",
+      "3. Dive deeper into ARKit and ARCore for native mobile AR",
+      "4. Understand SLAM for spatial awareness",
+      "5. Create gesture-based and geo-located AR experiences",
+      "6. Explore AR cloud for multi-user anchoring",
+      "7. Optimize performance and UI/UX for AR apps",
+      "8. Publish AR experiences across platforms"
+    ]
+  }
+}
+,
+
+
+
+
+
+{
+  "input": "Topic: Prompt Engineering\n\nHere is what I already know:\n- Few-shot prompting\n- Used ChatGPT and Bard APIs\n- Created some prompts for content generation\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Prompt Engineering.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Prompt Types (Zero-shot, Few-shot, Chain-of-thought)",
+      "Prompt Patterns and Templates",
+      "Role-based Prompting",
+      "System Prompt Design",
+      "Instruction Tuning",
+      "Fine-tuning vs Prompting",
+      "Evaluating Prompt Quality",
+      "Toolformer-style Prompting",
+      "Prompt Chaining",
+      "Latent Space Manipulation",
+      "Memory Injection Techniques",
+      "Hallucination Handling",
+      "Tokenization and Cost Awareness",
+      "Multi-turn Prompting",
+      "RAG (Retrieval-Augmented Generation)",
+      "Prompt Engineering for Code",
+      "AI Assistant Workflows"
+    ],
+    "covered_topics": [
+      "Few-shot prompting",
+      "Used ChatGPT and Bard APIs",
+      "Created some prompts for content generation"
+    ],
+    "gap_topics": [
+      "Prompt Types (Zero-shot, Chain-of-thought)",
+      "Prompt Patterns and Templates",
+      "Role-based Prompting",
+      "System Prompt Design",
+      "Instruction Tuning",
+      "Fine-tuning vs Prompting",
+      "Evaluating Prompt Quality",
+      "Toolformer-style Prompting",
+      "Prompt Chaining",
+      "Latent Space Manipulation",
+      "Memory Injection Techniques",
+      "Hallucination Handling",
+      "Tokenization and Cost Awareness",
+      "Multi-turn Prompting",
+      "RAG (Retrieval-Augmented Generation)",
+      "Prompt Engineering for Code",
+      "AI Assistant Workflows"
+    ],
+    "study_roadmap": [
+      "1. Master basic types of prompting and when to use them",
+      "2. Study pattern-based design and role conditioning",
+      "3. Dive into instruction tuning and evaluating prompts",
+      "4. Learn prompt chaining and memory-aware prompts",
+      "5. Explore RAG and augmentation with external data",
+      "6. Design effective system prompts for different use cases",
+      "7. Analyze tokenization and cost-effectiveness",
+      "8. Experiment with multi-modal prompting and assistant design"
+    ]
+  }
+},
+
+
+
+
+
+
+
+{
+  "input": "Topic: Blockchain Infrastructure\n\nHere is what I already know:\n- Blockchain basics\n- Ethereum wallets and smart contract deployment on testnets\n- Used Metamask and Remix IDE\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Blockchain Infrastructure.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Blockchain Architecture",
+      "Consensus Algorithms",
+      "Nodes and Clients",
+      "Ethereum Internals",
+      "Layer 1 vs Layer 2",
+      "Rollups (Optimistic, ZK)",
+      "Smart Contract Security",
+      "Decentralized Storage (IPFS, Arweave)",
+      "RPC and JSON Interfaces",
+      "Running Full Nodes",
+      "Light Clients",
+      "Cross-chain Communication",
+      "DevOps for Blockchain",
+      "Oracles and Data Feeds",
+      "Gas Optimization",
+      "Private Blockchains",
+      "Infrastructure as Code (for nodes)",
+      "Monitoring & Logging"
+    ],
+    "covered_topics": [
+      "Blockchain basics",
+      "Ethereum wallets and smart contract deployment on testnets",
+      "Used Metamask and Remix IDE"
+    ],
+    "gap_topics": [
+      "Blockchain Architecture",
+      "Consensus Algorithms",
+      "Nodes and Clients",
+      "Ethereum Internals",
+      "Layer 1 vs Layer 2",
+      "Rollups (Optimistic, ZK)",
+      "Smart Contract Security",
+      "Decentralized Storage (IPFS, Arweave)",
+      "RPC and JSON Interfaces",
+      "Running Full Nodes",
+      "Light Clients",
+      "Cross-chain Communication",
+      "DevOps for Blockchain",
+      "Oracles and Data Feeds",
+      "Gas Optimization",
+      "Private Blockchains",
+      "Infrastructure as Code (for nodes)",
+      "Monitoring & Logging"
+    ],
+    "study_roadmap": [
+      "1. Understand client architectures and consensus algorithms",
+      "2. Deploy full nodes and connect with JSON RPC",
+      "3. Learn Layer 2 scalability with rollups",
+      "4. Explore IPFS and Arweave for decentralized storage",
+      "5. Set up DevOps pipelines for node management",
+      "6. Focus on smart contract security audits",
+      "7. Practice monitoring node health and logs",
+      "8. Test cross-chain bridges and oracle integrations"
+    ]
+  }
+},
+
+
+
+
+
+
+
+
+{
+  "input": "Topic: Edge Computing\n\nHere is what I already know:\n- Basic understanding of IoT\n- Cloud vs Edge computing difference\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Edge Computing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Edge Architecture",
+      "Fog Computing",
+      "Edge Devices & Sensors",
+      "Latency Optimization",
+      "Edge AI & ML",
+      "Edge Security",
+      "Data Processing at Edge",
+      "Edge Orchestration",
+      "5G & Edge Integration",
+      "Docker & K8s on Edge",
+      "Edge Gateways",
+      "Use Cases in Industry",
+      "Scalability Challenges",
+      "Edge Analytics",
+      "Real-Time Processing",
+      "Open Source Edge Platforms",
+      "Data Offloading Strategies"
+    ],
+    "covered_topics": [
+      "Basic understanding of IoT",
+      "Cloud vs Edge computing difference"
+    ],
+    "gap_topics": [
+      "Edge Architecture",
+      "Fog Computing",
+      "Edge Devices & Sensors",
+      "Latency Optimization",
+      "Edge AI & ML",
+      "Edge Security",
+      "Data Processing at Edge",
+      "Edge Orchestration",
+      "5G & Edge Integration",
+      "Docker & K8s on Edge",
+      "Edge Gateways",
+      "Use Cases in Industry",
+      "Scalability Challenges",
+      "Edge Analytics",
+      "Real-Time Processing",
+      "Open Source Edge Platforms",
+      "Data Offloading Strategies"
+    ],
+    "study_roadmap": [
+      "1. Learn about various Edge and Fog computing architectures",
+      "2. Understand real-time data processing and edge analytics",
+      "3. Explore AI/ML on edge devices for localized inference",
+      "4. Study how 5G enhances Edge performance",
+      "5. Dive into Edge-specific security models and threats",
+      "6. Set up a Raspberry Pi with Docker to simulate Edge deployment",
+      "7. Explore orchestration frameworks like KubeEdge or Open Horizon",
+      "8. Review enterprise use cases across healthcare, automotive, and smart cities"
+    ]
+  }
+}
+,
+
+
+
+
+{
+  "input": "Topic: Quantum Computing\n\nHere is what I already know:\n- Superposition and entanglement basics\n- Difference between classical and quantum bits\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Quantum Computing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Quantum Gates",
+      "Qubits and Quantum Circuits",
+      "Quantum Algorithms (Grover, Shor)",
+      "Quantum Decoherence",
+      "Quantum Error Correction",
+      "Qiskit and IBM Q Experience",
+      "Quantum Supremacy",
+      "Quantum Cryptography",
+      "Quantum Annealing",
+      "Noisy Intermediate-Scale Quantum (NISQ)",
+      "Bloch Sphere",
+      "Measurement & Collapse",
+      "Quantum Teleportation",
+      "Quantum Key Distribution (QKD)",
+      "Variational Quantum Eigensolver (VQE)",
+      "Quantum Machine Learning"
+    ],
+    "covered_topics": [
+      "Superposition and entanglement basics",
+      "Difference between classical and quantum bits"
+    ],
+    "gap_topics": [
+      "Quantum Gates",
+      "Qubits and Quantum Circuits",
+      "Quantum Algorithms (Grover, Shor)",
+      "Quantum Decoherence",
+      "Quantum Error Correction",
+      "Qiskit and IBM Q Experience",
+      "Quantum Supremacy",
+      "Quantum Cryptography",
+      "Quantum Annealing",
+      "Noisy Intermediate-Scale Quantum (NISQ)",
+      "Bloch Sphere",
+      "Measurement & Collapse",
+      "Quantum Teleportation",
+      "Quantum Key Distribution (QKD)",
+      "Variational Quantum Eigensolver (VQE)",
+      "Quantum Machine Learning"
+    ],
+    "study_roadmap": [
+      "1. Master quantum gates and build circuits using Qiskit",
+      "2. Learn major quantum algorithms and their applications",
+      "3. Understand error correction and NISQ limitations",
+      "4. Explore quantum cryptography and teleportation concepts",
+      "5. Implement basic programs on IBM Q cloud platform",
+      "6. Study quantum-enhanced ML models for real-world use cases"
+    ]
+  }
+}
+
+
+,
+
+
+
+
+{
+  "input": "Topic: IoT Security\n\nHere is what I already know:\n- IoT device types\n- Basic network protocols (HTTP, MQTT)\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under IoT Security.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "IoT Threat Models",
+      "Device Authentication & Authorization",
+      "Secure Boot & Firmware Validation",
+      "Data Encryption Protocols",
+      "Physical Security of Devices",
+      "IoT Attack Surfaces",
+      "Botnets (Mirai, etc.)",
+      "TLS/SSL in Constrained Devices",
+      "Public Key Infrastructure (PKI)",
+      "Edge Security Mechanisms",
+      "Secure OTA Updates",
+      "Intrusion Detection in IoT",
+      "Zero Trust Architecture",
+      "Regulations & Compliance (GDPR, HIPAA)",
+      "IoT Security Standards (ISO, NIST)",
+      "Blockchain in IoT Security"
+    ],
+    "covered_topics": [
+      "IoT device types",
+      "Basic network protocols (HTTP, MQTT)"
+    ],
+    "gap_topics": [
+      "IoT Threat Models",
+      "Device Authentication & Authorization",
+      "Secure Boot & Firmware Validation",
+      "Data Encryption Protocols",
+      "Physical Security of Devices",
+      "IoT Attack Surfaces",
+      "Botnets (Mirai, etc.)",
+      "TLS/SSL in Constrained Devices",
+      "Public Key Infrastructure (PKI)",
+      "Edge Security Mechanisms",
+      "Secure OTA Updates",
+      "Intrusion Detection in IoT",
+      "Zero Trust Architecture",
+      "Regulations & Compliance (GDPR, HIPAA)",
+      "IoT Security Standards (ISO, NIST)",
+      "Blockchain in IoT Security"
+    ],
+    "study_roadmap": [
+      "1. Learn about common threat vectors and attack models",
+      "2. Study secure communication protocols for constrained devices",
+      "3. Implement PKI and secure firmware validation for devices",
+      "4. Explore Zero Trust and blockchain-based IoT security models",
+      "5. Understand compliance with international IoT standards"
+    ]
+  }
+}
+
+,
+
+
+{
+  "input": "Topic: DevSecOps\n\nHere is what I already know:\n- Basic DevOps workflow\n- GitHub and CI/CD pipelines\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under DevSecOps.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "DevSecOps Principles",
+      "Threat Modeling in DevOps",
+      "SAST & DAST Tools",
+      "Software Composition Analysis (SCA)",
+      "Container Security (Docker, K8s)",
+      "Secrets Management",
+      "Secure Code Practices",
+      "CI/CD Security Pipelines",
+      "Infrastructure as Code Security",
+      "Security Gate Automation",
+      "Vulnerability Scanning",
+      "Compliance Automation",
+      "Runtime Protection",
+      "Zero Trust DevSecOps",
+      "OWASP DevSecOps Guide",
+      "Security Chaos Engineering"
+    ],
+    "covered_topics": [
+      "Basic DevOps workflow",
+      "GitHub and CI/CD pipelines"
+    ],
+    "gap_topics": [
+      "DevSecOps Principles",
+      "Threat Modeling in DevOps",
+      "SAST & DAST Tools",
+      "Software Composition Analysis (SCA)",
+      "Container Security (Docker, K8s)",
+      "Secrets Management",
+      "Secure Code Practices",
+      "CI/CD Security Pipelines",
+      "Infrastructure as Code Security",
+      "Security Gate Automation",
+      "Vulnerability Scanning",
+      "Compliance Automation",
+      "Runtime Protection",
+      "Zero Trust DevSecOps",
+      "OWASP DevSecOps Guide",
+      "Security Chaos Engineering"
+    ],
+    "study_roadmap": [
+      "1. Learn foundational DevSecOps principles and workflows",
+      "2. Integrate security scanners into CI/CD pipelines",
+      "3. Implement secrets management with Vault or AWS Secrets Manager",
+      "4. Secure containers and IaC templates",
+      "5. Practice real-time vulnerability mitigation and monitoring",
+      "6. Follow OWASP DevSecOps maturity model"
+    ]
+  }
+}
+
+
+,
+
+
+
+
+{
+  "input": "Topic: Robotics Programming\n\nHere is what I already know:\n- Basics of Python\n- Familiar with Arduino and sensors\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Robotics Programming.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Robot Operating System (ROS)",
+      "Kinematics and Dynamics",
+      "PID Control Systems",
+      "Sensor Fusion",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "Path Planning Algorithms",
+      "Inverse Kinematics",
+      "Computer Vision in Robotics",
+      "Motor Control",
+      "Embedded Systems Programming",
+      "Actuators and Servos",
+      "ROS Navigation Stack",
+      "Gazebo Simulation",
+      "Realtime Systems",
+      "Autonomous Navigation",
+      "Robot Perception",
+      "Edge AI for Robots"
+    ],
+    "covered_topics": [
+      "Basics of Python",
+      "Familiar with Arduino and sensors"
+    ],
+    "gap_topics": [
+      "Robot Operating System (ROS)",
+      "Kinematics and Dynamics",
+      "PID Control Systems",
+      "Sensor Fusion",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "Path Planning Algorithms",
+      "Inverse Kinematics",
+      "Computer Vision in Robotics",
+      "Motor Control",
+      "Embedded Systems Programming",
+      "Actuators and Servos",
+      "ROS Navigation Stack",
+      "Gazebo Simulation",
+      "Realtime Systems",
+      "Autonomous Navigation",
+      "Robot Perception",
+      "Edge AI for Robots"
+    ],
+    "study_roadmap": [
+      "1. Learn basics of kinematics and control systems",
+      "2. Get hands-on with ROS and Gazebo simulation",
+      "3. Practice SLAM and navigation algorithms",
+      "4. Apply computer vision for robot perception",
+      "5. Work on embedded systems and actuator control",
+      "6. Explore autonomous navigation and edge AI"
+    ]
+  }
+}
+,
+
+
+
+
+
+{
+  "input": "Topic: Synthetic Data Generation\n\nHere is what I already know:\n- Data preprocessing basics\n- Python with pandas and scikit-learn\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Synthetic Data Generation.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Types of Synthetic Data (tabular, image, text)",
+      "Generative Adversarial Networks (GANs)",
+      "Variational Autoencoders (VAEs)",
+      "Data Privacy and Anonymization",
+      "Differential Privacy",
+      "SMOTE and Oversampling Techniques",
+      "CTGAN, TVAE, and Synthpop",
+      "Data Quality and Fidelity Metrics",
+      "Bias Detection and Mitigation",
+      "Synthetic Data in NLP",
+      "Synthetic Data for Computer Vision",
+      "Privacy-Preserving ML",
+      "Synthetic Data Evaluation Tools",
+      "Use Cases in Healthcare & Finance",
+      "Scalability and Realism in Data Generation",
+      "Benchmarking with Real Datasets"
+    ],
+    "covered_topics": [
+      "Data preprocessing basics",
+      "Python with pandas and scikit-learn"
+    ],
+    "gap_topics": [
+      "Types of Synthetic Data (tabular, image, text)",
+      "Generative Adversarial Networks (GANs)",
+      "Variational Autoencoders (VAEs)",
+      "Data Privacy and Anonymization",
+      "Differential Privacy",
+      "SMOTE and Oversampling Techniques",
+      "CTGAN, TVAE, and Synthpop",
+      "Data Quality and Fidelity Metrics",
+      "Bias Detection and Mitigation",
+      "Synthetic Data in NLP",
+      "Synthetic Data for Computer Vision",
+      "Privacy-Preserving ML",
+      "Synthetic Data Evaluation Tools",
+      "Use Cases in Healthcare & Finance",
+      "Scalability and Realism in Data Generation",
+      "Benchmarking with Real Datasets"
+    ],
+    "study_roadmap": [
+      "1. Understand different types and applications of synthetic data",
+      "2. Learn about GANs, VAEs and oversampling methods like SMOTE",
+      "3. Study tools like CTGAN and differential privacy techniques",
+      "4. Explore use cases in computer vision and NLP",
+      "5. Evaluate data quality, fairness, and bias",
+      "6. Build end-to-end pipelines for synthetic data generation"
+    ]
+  }
+}
+
+,
+
+
+
+
+
+{
+  "input": "Topic: Multimodal AI\n\nHere is what I already know:\n- Basics of machine learning\n- Worked on image classification and sentiment analysis separately\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Multimodal AI.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Introduction to Multimodal AI",
+      "Text-Image Fusion Models",
+      "Multimodal Transformers",
+      "CLIP and ALIGN",
+      "Vision-Language Pretraining (VLP)",
+      "Audio-Visual Models",
+      "Prompt-based Multimodal Inference",
+      "Cross-modal Retrieval",
+      "Attention Mechanisms in Multimodal Learning",
+      "Multimodal Datasets (COCO, VQA)",
+      "Multimodal Fusion Techniques",
+      "Multimodal Emotion Recognition",
+      "Visual Question Answering (VQA)",
+      "Multimodal Embeddings",
+      "Zero-shot Learning in Multimodal Models",
+      "Multimodal Chatbots"
+    ],
+    "covered_topics": [
+      "Basics of machine learning",
+      "Worked on image classification and sentiment analysis separately"
+    ],
+    "gap_topics": [
+      "Introduction to Multimodal AI",
+      "Text-Image Fusion Models",
+      "Multimodal Transformers",
+      "CLIP and ALIGN",
+      "Vision-Language Pretraining (VLP)",
+      "Audio-Visual Models",
+      "Prompt-based Multimodal Inference",
+      "Cross-modal Retrieval",
+      "Attention Mechanisms in Multimodal Learning",
+      "Multimodal Datasets (COCO, VQA)",
+      "Multimodal Fusion Techniques",
+      "Multimodal Emotion Recognition",
+      "Visual Question Answering (VQA)",
+      "Multimodal Embeddings",
+      "Zero-shot Learning in Multimodal Models",
+      "Multimodal Chatbots"
+    ],
+    "study_roadmap": [
+      "1. Learn foundations of multimodal fusion and attention",
+      "2. Study architectures like CLIP and multimodal transformers",
+      "3. Explore use cases like VQA and emotion recognition",
+      "4. Train models using COCO/VQA datasets",
+      "5. Build prototype applications like multimodal chatbots",
+      "6. Investigate zero-shot and cross-modal learning"
+    ]
+  }
+}
+
+,
+
+
+
+
+
+
+{
+  "input": "Topic: Federated Learning\n\nHere is what I already know:\n- Centralized model training using TensorFlow\n- Basic understanding of data privacy laws\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Federated Learning.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Federated Learning Architecture",
+      "FL Algorithms (FedAvg, FedProx)",
+      "Client-Server Communication",
+      "Secure Aggregation Techniques",
+      "Differential Privacy in FL",
+      "Data Heterogeneity Challenges",
+      "Cross-Silo vs Cross-Device FL",
+      "Model Compression in FL",
+      "Attack Vectors in FL",
+      "Privacy-Preserving Mechanisms",
+      "Homomorphic Encryption in FL",
+      "Edge AI & On-Device Training",
+      "FL with PySyft and TensorFlow Federated",
+      "Benchmarking and Evaluation",
+      "Use Cases in Healthcare and Finance",
+      "Regulatory Considerations"
+    ],
+    "covered_topics": [
+      "Centralized model training using TensorFlow",
+      "Basic understanding of data privacy laws"
+    ],
+    "gap_topics": [
+      "Federated Learning Architecture",
+      "FL Algorithms (FedAvg, FedProx)",
+      "Client-Server Communication",
+      "Secure Aggregation Techniques",
+      "Differential Privacy in FL",
+      "Data Heterogeneity Challenges",
+      "Cross-Silo vs Cross-Device FL",
+      "Model Compression in FL",
+      "Attack Vectors in FL",
+      "Privacy-Preserving Mechanisms",
+      "Homomorphic Encryption in FL",
+      "Edge AI & On-Device Training",
+      "FL with PySyft and TensorFlow Federated",
+      "Benchmarking and Evaluation",
+      "Use Cases in Healthcare and Finance",
+      "Regulatory Considerations"
+    ],
+    "study_roadmap": [
+      "1. Learn core federated learning architecture and algorithms",
+      "2. Explore client coordination, secure updates and encryption",
+      "3. Experiment using PySyft or TensorFlow Federated",
+      "4. Address privacy and heterogeneity challenges",
+      "5. Implement FL in real-world scenarios with compliance focus"
+    ]
+  }
+}
+,
+
+
+
+
+
+
+{
+  "input": "Topic: Edge Computing\n\nHere is what I already know:\n- Basic understanding of cloud computing\n- Familiar with IoT devices and sensors\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Edge Computing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Edge vs Cloud Architecture",
+      "Edge Devices and Microcontrollers",
+      "Latency and Bandwidth Optimization",
+      "Edge AI and ML Inference",
+      "Edge Security and Data Privacy",
+      "Real-time Data Processing",
+      "IoT Edge Frameworks (Azure IoT Edge, AWS Greengrass)",
+      "Containerization on Edge (Docker, K3s)",
+      "Event-Driven Edge Architectures",
+      "Edge Storage Solutions",
+      "Communication Protocols (MQTT, CoAP)",
+      "Edge Gateway Design",
+      "Federated Learning at the Edge",
+      "Energy Efficiency on Edge Devices",
+      "Use Cases in Smart Cities and Healthcare",
+      "Monitoring and Troubleshooting at the Edge"
+    ],
+    "covered_topics": [
+      "Basic understanding of cloud computing",
+      "Familiar with IoT devices and sensors"
+    ],
+    "gap_topics": [
+      "Edge vs Cloud Architecture",
+      "Edge Devices and Microcontrollers",
+      "Latency and Bandwidth Optimization",
+      "Edge AI and ML Inference",
+      "Edge Security and Data Privacy",
+      "Real-time Data Processing",
+      "IoT Edge Frameworks (Azure IoT Edge, AWS Greengrass)",
+      "Containerization on Edge (Docker, K3s)",
+      "Event-Driven Edge Architectures",
+      "Edge Storage Solutions",
+      "Communication Protocols (MQTT, CoAP)",
+      "Edge Gateway Design",
+      "Federated Learning at the Edge",
+      "Energy Efficiency on Edge Devices",
+      "Use Cases in Smart Cities and Healthcare",
+      "Monitoring and Troubleshooting at the Edge"
+    ],
+    "study_roadmap": [
+      "1. Understand edge vs cloud differences and latency implications",
+      "2. Explore real-time processing and event-driven architectures",
+      "3. Study containerization and orchestration on edge devices",
+      "4. Learn about security, privacy, and efficient data processing",
+      "5. Experiment with frameworks like Azure IoT Edge or AWS Greengrass",
+      "6. Build sample projects for edge inference and federated learning"
+    ]
+  }
+}
+
+
+
+,
+
+
+
+{
+  "input": "Topic: 3D Game Development\n\nHere is what I already know:\n- Familiar with Unity basics\n- Basic programming with C#\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under 3D Game Development.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "3D Graphics Pipeline",
+      "Mesh Modeling & Texturing",
+      "Lighting & Shading Techniques",
+      "Physics Engines in Games",
+      "Cameras and Scene Management",
+      "Animation with Rigs and Bones",
+      "Game Physics (Collisions, Rigidbodies)",
+      "C# Scripting for Game Logic",
+      "Audio Systems and Sound FX",
+      "Shader Programming (HLSL/Shader Graph)",
+      "Particle Systems",
+      "NavMesh and AI Pathfinding",
+      "Multiplayer Networking (Mirror/Photon)",
+      "Level Design and Optimization",
+      "Performance Tuning for 3D Games",
+      "Deploying on PC, Console, and Mobile"
+    ],
+    "covered_topics": [
+      "Familiar with Unity basics",
+      "Basic programming with C#"
+    ],
+    "gap_topics": [
+      "3D Graphics Pipeline",
+      "Mesh Modeling & Texturing",
+      "Lighting & Shading Techniques",
+      "Physics Engines in Games",
+      "Cameras and Scene Management",
+      "Animation with Rigs and Bones",
+      "Game Physics (Collisions, Rigidbodies)",
+      "Audio Systems and Sound FX",
+      "Shader Programming (HLSL/Shader Graph)",
+      "Particle Systems",
+      "NavMesh and AI Pathfinding",
+      "Multiplayer Networking (Mirror/Photon)",
+      "Level Design and Optimization",
+      "Performance Tuning for 3D Games",
+      "Deploying on PC, Console, and Mobile"
+    ],
+    "study_roadmap": [
+      "1. Deepen Unity skills by exploring 3D graphics pipeline and lighting",
+      "2. Learn modeling, shading, and animation techniques",
+      "3. Implement game physics, audio systems, and particle effects",
+      "4. Add AI, pathfinding, and multiplayer features",
+      "5. Focus on optimization and performance",
+      "6. Publish and test on different platforms"
+    ]
+  }
+}
+,
+
+
+
+
+{
+  "input": "Topic: Spatial Computing\n\nHere is what I already know:\n- Familiar with ARKit and basic AR experiences on mobile\n- Understand GPS and sensor-based location tracking\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Spatial Computing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "3D Spatial Mapping",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "Sensor Fusion Techniques",
+      "Head Tracking & Eye Tracking",
+      "Holographic Displays",
+      "Gesture Recognition",
+      "Spatial Audio",
+      "AR Cloud",
+      "Indoor Positioning Systems",
+      "Environmental Understanding APIs",
+      "Digital Twins in AR/VR",
+      "WebXR and Spatial Web",
+      "Interaction Design in XR",
+      "Hardware for Spatial Computing (HoloLens, Magic Leap)",
+      "Edge Rendering in XR",
+      "Ethics and Privacy in Spatial Tech"
+    ],
+    "covered_topics": [
+      "Familiar with ARKit and basic AR experiences on mobile",
+      "Understand GPS and sensor-based location tracking"
+    ],
+    "gap_topics": [
+      "3D Spatial Mapping",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "Sensor Fusion Techniques",
+      "Head Tracking & Eye Tracking",
+      "Holographic Displays",
+      "Gesture Recognition",
+      "Spatial Audio",
+      "AR Cloud",
+      "Indoor Positioning Systems",
+      "Environmental Understanding APIs",
+      "Digital Twins in AR/VR",
+      "WebXR and Spatial Web",
+      "Interaction Design in XR",
+      "Hardware for Spatial Computing (HoloLens, Magic Leap)",
+      "Edge Rendering in XR",
+      "Ethics and Privacy in Spatial Tech"
+    ],
+    "study_roadmap": [
+      "1. Understand SLAM and 3D environment reconstruction",
+      "2. Learn about AR Cloud and persistent spatial experiences",
+      "3. Explore sensor fusion and real-time spatial tracking",
+      "4. Work with spatial UX/UI, gestures, and voice interfaces",
+      "5. Dive into spatial audio and immersive feedback systems",
+      "6. Build multi-user AR experiences using WebXR or Unity XR"
+    ]
+  }
+}
+,
+
+
+
+
+
+
+
+{
+  "input": "Topic: LLM Compression\n\nHere is what I already know:\n- Understand large language models and how transformers work\n- Have experimented with quantized models like GPTQ\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under LLM Compression.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Model Quantization (8-bit, 4-bit, etc.)",
+      "Pruning Techniques (Structured, Unstructured)",
+      "Knowledge Distillation",
+      "Weight Clustering",
+      "LoRA (Low-Rank Adaptation)",
+      "Dynamic Sparsity",
+      "Token Merging & Vocabulary Optimization",
+      "Cross-layer Parameter Sharing",
+      "On-device LLM Inference (e.g., MLC, GGUF)",
+      "Memory-efficient Transformers (Linformer, Performer)",
+      "Compression-Aware Training",
+      "Trade-offs: Accuracy vs. Size",
+      "Benchmarking and Evaluation Tools",
+      "Deployment on Edge/Browser",
+      "Compression Libraries (BitsAndBytes, DeepSpeed, Hugging Face Transformers)"
+    ],
+    "covered_topics": [
+      "Understand large language models and how transformers work",
+      "Have experimented with quantized models like GPTQ"
+    ],
+    "gap_topics": [
+      "Model Quantization (Advanced)",
+      "Pruning Techniques (Structured, Unstructured)",
+      "Knowledge Distillation",
+      "Weight Clustering",
+      "LoRA (Low-Rank Adaptation)",
+      "Dynamic Sparsity",
+      "Token Merging & Vocabulary Optimization",
+      "Cross-layer Parameter Sharing",
+      "On-device LLM Inference (e.g., MLC, GGUF)",
+      "Memory-efficient Transformers (Linformer, Performer)",
+      "Compression-Aware Training",
+      "Trade-offs: Accuracy vs. Size",
+      "Benchmarking and Evaluation Tools",
+      "Deployment on Edge/Browser",
+      "Compression Libraries (BitsAndBytes, DeepSpeed, Hugging Face Transformers)"
+    ],
+    "study_roadmap": [
+      "1. Study the theory and practice of knowledge distillation",
+      "2. Learn pruning strategies and structured sparsity techniques",
+      "3. Explore LoRA and fine-tuning with fewer parameters",
+      "4. Implement quantization using libraries like GPTQ and BitsAndBytes",
+      "5. Deploy compact LLMs on edge devices or browsers",
+      "6. Evaluate trade-offs using real-world performance benchmarks"
+    ]
+  }
+}
+
+,
+
+
+
+
+{
+  "input": "Topic: Digital Twins\n\nHere is what I already know:\n- Basic idea of virtual replicas of real-world systems\n- Some exposure to simulation tools\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Digital Twins.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "System Modeling & Simulation",
+      "IoT Data Integration",
+      "Sensor Data Fusion",
+      "Real-Time Data Synchronization",
+      "Digital Twin Architecture",
+      "Cloud vs Edge Implementation",
+      "Cyber-Physical Systems",
+      "AI for Predictive Maintenance",
+      "AR/VR Integration",
+      "Digital Thread",
+      "BIM & CAD Data Ingestion",
+      "Scalability of Digital Twins",
+      "Security in Digital Twins",
+      "Use Cases in Manufacturing",
+      "Smart Cities & Infrastructure Twins"
+    ],
+    "covered_topics": [
+      "Basic idea of virtual replicas of real-world systems",
+      "Exposure to simulation tools"
+    ],
+    "gap_topics": [
+      "System Modeling & Simulation (Advanced)",
+      "IoT Data Integration",
+      "Sensor Data Fusion",
+      "Real-Time Data Synchronization",
+      "Digital Twin Architecture",
+      "Cloud vs Edge Implementation",
+      "Cyber-Physical Systems",
+      "AI for Predictive Maintenance",
+      "AR/VR Integration",
+      "Digital Thread",
+      "BIM & CAD Data Ingestion",
+      "Scalability of Digital Twins",
+      "Security in Digital Twins",
+      "Use Cases in Manufacturing",
+      "Smart Cities & Infrastructure Twins"
+    ],
+    "study_roadmap": [
+      "1. Deep dive into system modeling tools and frameworks",
+      "2. Learn IoT integration for real-time data ingestion",
+      "3. Study architectural components of scalable Digital Twins",
+      "4. Explore AI use for predictive analysis and behavior modeling",
+      "5. Understand AR/VR visualization in twin systems",
+      "6. Learn deployment strategies on edge and cloud",
+      "7. Dive into security and privacy considerations",
+      "8. Analyze domain-specific use cases: smart cities, healthcare, and industry 4.0"
+    ]
+  }
+}]
