@@ -19,44 +19,29 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 
-export const GapAnalysis = () => {
+type GapAnalysisProps = {
+  topic: string;
+  knowledge: any;
+  aiOutput: any;
+};
+
+export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) => {
   const [activeTab, setActiveTab] = useState('overview');
 
+  // Extract topics from aiOutput (fallback to empty array if undefined)
+  const knownConcepts = aiOutput?.covered_topics || [];
+  const gapsToExplore = aiOutput?.gap_topics || [];
+
   const data = [
-    { name: 'Known', value: 8 },
-    { name: 'Gaps', value: 20 },
+    { name: 'Known', value: knownConcepts.length },
+    { name: 'Gaps', value: gapsToExplore.length },
   ];
 
   const COLORS = ['#4C6EF5', '#E0E0E0'];
 
-  const knownConcepts = [
-    'Supervised Learning',
-    'Unsupervised Learning',
-    'Regression',
-    'Classification',
-    'Linear Regression',
-    'Decision Trees',
-    'Q-Learning',
-    'Neural Networks',
-  ];
-  const gapsToExplore = [
-    'Random Forests',
-    'Support Vector Machines',
-    'Clustering',
-    'Dimensionality Reduction',
-    'K-means',
-    'Hierarchical Clustering',
-    'PCA',
-    'Anomaly Detection',
-    'Policy Gradient',
-    'Markov Decision Process',
-    'RL Agents',
-    'Convolutional NNs',
-    'Recurrent NNs',
-    'Transformers'
-  ];
-
-  const percentageKnown = Math.round((knownConcepts.length / (knownConcepts.length + gapsToExplore.length)) * 100);
+  const percentageKnown = Math.round(
+    (knownConcepts.length / (knownConcepts.length + gapsToExplore.length)) * 100
+  );
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
@@ -64,8 +49,8 @@ export const GapAnalysis = () => {
         <div className="bg-white p-3 shadow-lg rounded-lg border border-gray-200 dark:bg-slate-800 dark:border-gray-600">
           <p className="font-medium text-gray-800 dark:text-white">{`${payload[0].name} : ${payload[0].value}`}</p>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            {payload[0].name === 'Known' 
-              ? 'Concepts you already understand' 
+            {payload[0].name === 'Known'
+              ? 'Concepts you already understand'
               : 'Topics to explore next'}
           </p>
         </div>

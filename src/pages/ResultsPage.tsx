@@ -15,35 +15,36 @@ const ResultsPage = () => {
   const navigate = useNavigate();
   const [topic, setTopic] = useState('');
   const [knowledge, setKnowledge] = useState('');
+  const [aiOutput, setAiOutput] = useState<any>(null);
   const [showPlaceholder, setShowPlaceholder] = useState(false);
 
   useEffect(() => {
-    const state = location.state as { topic?: string; knowledge?: string } | null;
-    
+    const state = location.state as { topic?: string; knowledgeInput?: string; aiOutput?: any } | null;
+
     if (state?.topic) {
       setTopic(state.topic);
     } else {
+      setTopic('JavaScript');
       setShowPlaceholder(true);
     }
-    
-    if (state?.knowledge) {
-      setKnowledge(state.knowledge);
+
+    if (state?.knowledgeInput) {
+      setKnowledge(state.knowledgeInput);
+    }
+
+    if (state?.aiOutput) {
+      setAiOutput(state.aiOutput);
     }
   }, [location.state]);
 
-  if (showPlaceholder && !topic) {
-    setTopic('JavaScript');
-  }
-
   const handleGoBack = () => {
-    // Navigate directly to the input page instead of using history
     navigate('/topic-input');
   };
 
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar />
-      
+
       <div className="flex-1 overflow-auto p-6">
         <div className="flex items-center mb-4">
           <Button 
@@ -56,7 +57,7 @@ const ResultsPage = () => {
             Go Back
           </Button>
         </div>
-        
+
         {showPlaceholder && (
           <Alert className="mb-6">
             <AlertCircle className="h-4 w-4" />
@@ -66,23 +67,13 @@ const ResultsPage = () => {
             </AlertDescription>
           </Alert>
         )}
-        
+
         <Routes>
-          <Route path="/" element={
-            <GapAnalysis topic={topic} knowledge={knowledge} />
-          } />
-          <Route path="/resources" element={
-            <ResourcesSection topic={topic} />
-          } />
-          <Route path="/projects" element={
-            <ProjectsSection topic={topic} />
-          } />
-          <Route path="/ai-resources" element={
-            <AiResources topic={topic} />
-          } />
-          <Route path="/interview-questions" element={
-            <InterviewQuestions topic={topic} />
-          } />
+          <Route path="/" element={<GapAnalysis topic={topic} knowledge={knowledge}  aiOutput={aiOutput}  />} />
+          <Route path="/resources" element={<ResourcesSection topic={topic} aiOutput={aiOutput} />} />
+          <Route path="/projects" element={<ProjectsSection topic={topic} />} />
+          <Route path="/ai-resources" element={<AiResources topic={topic}  />} />
+          <Route path="/interview-questions" element={<InterviewQuestions topic={topic}  />} />
           <Route path="*" element={<Navigate to="/results" replace />} />
         </Routes>
       </div>

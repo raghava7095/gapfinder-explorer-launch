@@ -15,23 +15,38 @@ const TopicInput = () => {
   const [knowledgeInput, setKnowledgeInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleAnalyzeClick = () => {
-    if (!topic.trim() || !knowledgeInput.trim()) {
-      return;
-    }
-
+  const handleAnalyzeClick = async () => {
+    if (!topic.trim() || !knowledgeInput.trim()) return;
+  
     setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      // In a real app, you'd pass this data to the backend
-      navigate("/results/*", { 
-        state: { 
+  
+    try {
+      const response = await fetch("https://backend-fawn-nine-74.vercel.app/getknowledge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           topic,
-          knowledgeInput
-        } 
+          knowledgepara: knowledgeInput,
+        }),
       });
-    }, 1500);
+  
+      const data = await response.json();
+      console.log("✅ AI Response:", data);
+  
+      navigate("/results/*", {
+        state: {
+          topic,
+          knowledgeInput,
+          aiOutput: data.output
+        },
+      });
+    } catch (err) {
+      console.error("❌ Failed to fetch knowledge analysis:", err);
+    } finally {
+      setIsLoading(false);
+    }
   };
+  
 
   return (
     <div className="min-h-screen flex flex-col">
