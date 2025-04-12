@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Lightbulb, ArrowRight, Brain } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,8 +14,9 @@ const Home = () => {
       <header className="w-full py-4 px-6 flex justify-between items-center border-b">
         <div className="flex items-center gap-2">
           <Brain className="h-6 w-6 text-gapfinder-600" />
-          <h1 className="text-xl font-bold text-gapfinder-800">GapFinder</h1>
+          <h1 className="text-xl font-bold text-gapfinder-800 dark:text-gapfinder-200">GapFinder</h1>
         </div>
+        <ThemeToggle />
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 md:p-10">

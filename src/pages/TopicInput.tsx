@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, Brain, Search } from "lucide-react";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const TopicInput = () => {
   const navigate = useNavigate();
@@ -37,16 +38,19 @@ const TopicInput = () => {
       <header className="w-full py-4 px-6 flex justify-between items-center border-b">
         <div className="flex items-center gap-2">
           <Brain className="h-6 w-6 text-gapfinder-600" />
-          <h1 className="text-xl font-bold text-gapfinder-800">GapFinder</h1>
+          <h1 className="text-xl font-bold text-gapfinder-800 dark:text-gapfinder-200">GapFinder</h1>
         </div>
-        <Button 
-          variant="outline" 
-          onClick={() => navigate("/")}
-          className="flex items-center gap-2"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back home
-        </Button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button 
+            variant="outline" 
+            onClick={() => navigate("/")}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back home
+          </Button>
+        </div>
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 md:p-10">
