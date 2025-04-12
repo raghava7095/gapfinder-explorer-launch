@@ -1,0 +1,31 @@
+{
+    "documentation": [
+        {
+            "topic": "react",
+            "github": {
+                "repo": "freeCodeCamp/freeCodeCamp",
+                "url": "https://github.com/freeCodeCamp/freeCodeCamp"
+            },
+            "devdocs": "https://devdocs.io/#q=react",
+            "readme": "[![freeCodeCamp Social Banner](https://cdn.freecodecamp.org/platform/universal/fcc_banner_new.png)](https://www.freecodecamp.org/)\n\n[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://makeapullrequest.com)\n[![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)\n[![Open Source Helpers](https://www.codetriage.com/freecodecamp/freecodecamp/badges/users.svg)](https://www.codetriage.com/freecodecamp/freecodecamp)\n[![Setup Automated](https://img.shields.io/badge/setup-automated-blue?logo=gitpod)](https://gitpod.io/from-referrer/)\n[![Discord](https://img.shields.io/discord/692816967895220344?logo=discord&label=Discord&color=5865F2)](https://discord.gg/PRyKn3Vbay)\n\n## freeCodeCamp.org's open-source codebase and curriculum\n\n[freeCodeCamp.org](https://www.freecodecamp.org) is a friendly community where you can learn to code for free. It is run by a [donor-supported 50..."
+        },
+        {
+            "topic": "prompt engineering",
+            "github": {
+                "repo": "dair-ai/Prompt-Engineering-Guide",
+                "url": "https://github.com/dair-ai/Prompt-Engineering-Guide"
+            },
+            "devdocs": "https://devdocs.io/#q=prompt%20engineering",
+            "readme": "# Prompt Engineering Guide\n\nPrompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models (LMs) for a wide variety of applications and research topics. Prompt engineering skills help to better understand the capabilities and limitations of large language models (LLMs). Researchers use prompt engineering to improve the capacity of LLMs on a wide range of common and complex tasks such as question answering and arithmetic reasoning. Developers use prompt engineering to design robust and effective prompting techniques that interface with LLMs and other tools.\n\nMotivated by the high interest in developing with LLMs, we have created this new prompt engineering guide that contains all the latest papers, learning guides, lectures, references, and tools related to prompt engineering for LLMs.\n\n🌐 [Prompt Engineering Guide (Web Version)](https://www.promptingguide.ai/)\n\n🎉 We are excited to launch our brand new prompt engineering cours..."
+        },
+        {
+            "topic": "python",
+            "github": {
+                "repo": "donnemartin/system-design-primer",
+                "url": "https://github.com/donnemartin/system-design-primer"
+            },
+            "devdocs": "https://devdocs.io/#q=python",
+            "readme": "*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [русский язык](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Español](https://github.com/donnemartin/system-desig..."
+        }
+    ]
+}
