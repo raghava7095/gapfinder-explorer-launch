@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import TopicInput from "./pages/TopicInput";
 import AnalysisResults from "./pages/AnalysisResults";
 import NotFound from "./pages/NotFound";
+import AppLayout from "./components/AppLayout";
 
 const queryClient = new QueryClient();
 
@@ -20,9 +21,11 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/topic-input" element={<TopicInput />} />
-            <Route path="/analysis-results" element={<AnalysisResults />} />
+            <Route element={<AppLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/topic-input" element={<TopicInput />} />
+              <Route path="/analysis-results" element={<AnalysisResults />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
