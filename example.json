@@ -1725,4 +1725,175 @@
 
 
 
+{
+  "input": "Topic: Spatial Computing\n\nHere is what I already know:\n- Familiar with ARKit and basic AR experiences on mobile\n- Understand GPS and sensor-based location tracking\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Spatial Computing.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "3D Spatial Mapping",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "Sensor Fusion Techniques",
+      "Head Tracking & Eye Tracking",
+      "Holographic Displays",
+      "Gesture Recognition",
+      "Spatial Audio",
+      "AR Cloud",
+      "Indoor Positioning Systems",
+      "Environmental Understanding APIs",
+      "Digital Twins in AR/VR",
+      "WebXR and Spatial Web",
+      "Interaction Design in XR",
+      "Hardware for Spatial Computing (HoloLens, Magic Leap)",
+      "Edge Rendering in XR",
+      "Ethics and Privacy in Spatial Tech"
+    ],
+    "covered_topics": [
+      "Familiar with ARKit and basic AR experiences on mobile",
+      "Understand GPS and sensor-based location tracking"
+    ],
+    "gap_topics": [
+      "3D Spatial Mapping",
+      "SLAM (Simultaneous Localization and Mapping)",
+      "Sensor Fusion Techniques",
+      "Head Tracking & Eye Tracking",
+      "Holographic Displays",
+      "Gesture Recognition",
+      "Spatial Audio",
+      "AR Cloud",
+      "Indoor Positioning Systems",
+      "Environmental Understanding APIs",
+      "Digital Twins in AR/VR",
+      "WebXR and Spatial Web",
+      "Interaction Design in XR",
+      "Hardware for Spatial Computing (HoloLens, Magic Leap)",
+      "Edge Rendering in XR",
+      "Ethics and Privacy in Spatial Tech"
+    ],
+    "study_roadmap": [
+      "1. Understand SLAM and 3D environment reconstruction",
+      "2. Learn about AR Cloud and persistent spatial experiences",
+      "3. Explore sensor fusion and real-time spatial tracking",
+      "4. Work with spatial UX/UI, gestures, and voice interfaces",
+      "5. Dive into spatial audio and immersive feedback systems",
+      "6. Build multi-user AR experiences using WebXR or Unity XR"
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+{
+  "input": "Topic: LLM Compression\n\nHere is what I already know:\n- Understand large language models and how transformers work\n- Have experimented with quantized models like GPTQ\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under LLM Compression.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "Model Quantization (8-bit, 4-bit, etc.)",
+      "Pruning Techniques (Structured, Unstructured)",
+      "Knowledge Distillation",
+      "Weight Clustering",
+      "LoRA (Low-Rank Adaptation)",
+      "Dynamic Sparsity",
+      "Token Merging & Vocabulary Optimization",
+      "Cross-layer Parameter Sharing",
+      "On-device LLM Inference (e.g., MLC, GGUF)",
+      "Memory-efficient Transformers (Linformer, Performer)",
+      "Compression-Aware Training",
+      "Trade-offs: Accuracy vs. Size",
+      "Benchmarking and Evaluation Tools",
+      "Deployment on Edge/Browser",
+      "Compression Libraries (BitsAndBytes, DeepSpeed, Hugging Face Transformers)"
+    ],
+    "covered_topics": [
+      "Understand large language models and how transformers work",
+      "Have experimented with quantized models like GPTQ"
+    ],
+    "gap_topics": [
+      "Model Quantization (Advanced)",
+      "Pruning Techniques (Structured, Unstructured)",
+      "Knowledge Distillation",
+      "Weight Clustering",
+      "LoRA (Low-Rank Adaptation)",
+      "Dynamic Sparsity",
+      "Token Merging & Vocabulary Optimization",
+      "Cross-layer Parameter Sharing",
+      "On-device LLM Inference (e.g., MLC, GGUF)",
+      "Memory-efficient Transformers (Linformer, Performer)",
+      "Compression-Aware Training",
+      "Trade-offs: Accuracy vs. Size",
+      "Benchmarking and Evaluation Tools",
+      "Deployment on Edge/Browser",
+      "Compression Libraries (BitsAndBytes, DeepSpeed, Hugging Face Transformers)"
+    ],
+    "study_roadmap": [
+      "1. Study the theory and practice of knowledge distillation",
+      "2. Learn pruning strategies and structured sparsity techniques",
+      "3. Explore LoRA and fine-tuning with fewer parameters",
+      "4. Implement quantization using libraries like GPTQ and BitsAndBytes",
+      "5. Deploy compact LLMs on edge devices or browsers",
+      "6. Evaluate trade-offs using real-world performance benchmarks"
+    ]
+  }
+}
+
+
+
+
+
+
+{
+  "input": "Topic: Digital Twins\n\nHere is what I already know:\n- Basic idea of virtual replicas of real-world systems\n- Some exposure to simulation tools\n\nPlease help me by:\n1. Listing all the important subtopics and skills I should cover under Digital Twins.\n2. Identifying the knowledge gaps based on what I already know.\n3. Suggesting a personalized study roadmap.",
+  "output": {
+    "all_topics": [
+      "System Modeling & Simulation",
+      "IoT Data Integration",
+      "Sensor Data Fusion",
+      "Real-Time Data Synchronization",
+      "Digital Twin Architecture",
+      "Cloud vs Edge Implementation",
+      "Cyber-Physical Systems",
+      "AI for Predictive Maintenance",
+      "AR/VR Integration",
+      "Digital Thread",
+      "BIM & CAD Data Ingestion",
+      "Scalability of Digital Twins",
+      "Security in Digital Twins",
+      "Use Cases in Manufacturing",
+      "Smart Cities & Infrastructure Twins"
+    ],
+    "covered_topics": [
+      "Basic idea of virtual replicas of real-world systems",
+      "Exposure to simulation tools"
+    ],
+    "gap_topics": [
+      "System Modeling & Simulation (Advanced)",
+      "IoT Data Integration",
+      "Sensor Data Fusion",
+      "Real-Time Data Synchronization",
+      "Digital Twin Architecture",
+      "Cloud vs Edge Implementation",
+      "Cyber-Physical Systems",
+      "AI for Predictive Maintenance",
+      "AR/VR Integration",
+      "Digital Thread",
+      "BIM & CAD Data Ingestion",
+      "Scalability of Digital Twins",
+      "Security in Digital Twins",
+      "Use Cases in Manufacturing",
+      "Smart Cities & Infrastructure Twins"
+    ],
+    "study_roadmap": [
+      "1. Deep dive into system modeling tools and frameworks",
+      "2. Learn IoT integration for real-time data ingestion",
+      "3. Study architectural components of scalable Digital Twins",
+      "4. Explore AI use for predictive analysis and behavior modeling",
+      "5. Understand AR/VR visualization in twin systems",
+      "6. Learn deployment strategies on edge and cloud",
+      "7. Dive into security and privacy considerations",
+      "8. Analyze domain-specific use cases: smart cities, healthcare, and industry 4.0"
+    ]
+  }
+}
 
