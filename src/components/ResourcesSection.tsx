@@ -54,18 +54,18 @@ export const ResourcesSection = ({
   useEffect(() => {
     const storedTopic = localStorage.getItem("gapfinder_topic");
     const storedAiOutput = localStorage.getItem("gapfinder_aiOutput");
-  
+
     console.log("Stored AI Output:", storedAiOutput);
-  
+
     const parsedOutput: AIOutput | null =
       storedAiOutput && typeof storedAiOutput === 'string'
         ? JSON.parse(storedAiOutput)
         : null;
-  
+
     setTopic(propTopic || storedTopic || '');
     setAiOutput(propAiOutput || parsedOutput || null);
   }, [propTopic, propAiOutput]);
-  
+
 
   // Fetch videos/docs
   useEffect(() => {
@@ -174,16 +174,16 @@ export const ResourcesSection = ({
                 <CardDescription>By {video.channel}</CardDescription>
               </CardHeader>
               <CardContent>
-  <div className="aspect-video w-full max-w-2xl">
-    <iframe
-      className="w-full h-full rounded-lg"
-      src={`https://www.youtube.com/embed/${video.videoId}`}
-      title={video.title}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>
+                <div className="aspect-video w-full max-w-2xl">
+                  <iframe
+                    className="w-full h-full rounded-lg"
+                    src={`https://www.youtube.com/embed/${video.videoId}`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </CardContent>
 
             </Card>
@@ -195,23 +195,24 @@ export const ResourcesSection = ({
 
         {/* Roadmaps */}
         <TabsContent value="roadmaps" className="space-y-4">
-  {aiOutput.study_roadmap.map((step, index) => (
-    <Card key={index}>
-      <CardHeader>
-        <CardTitle>Step {index + 1}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        {typeof step === 'string' ? (
-          <div
-            className="prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: marked(step) }}
-          />
-        ) : (
-          <p className="text-muted-foreground">Invalid roadmap step format.</p>
-        )}
-      </CardContent>
-    </Card>
-  ))}
+          {aiOutput.study_roadmap.map((step, index) => (
+            <Card key={index}>
+              <CardHeader>
+                <CardTitle>Step {index + 1}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {step && typeof step === 'string' && step.trim().length > 0 ? (
+                  <div
+                    className="prose max-w-none"
+                    dangerouslySetInnerHTML={{ __html: marked(step) }}
+                  />
+                ) : (
+                  <p className="text-muted-foreground">No content available for this step.</p>
+                )}
+              </CardContent>
+
+            </Card>
+          ))}
         </TabsContent>
 
       </Tabs>
