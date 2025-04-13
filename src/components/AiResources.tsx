@@ -18,6 +18,7 @@ type AIOutput = {
   gap_topics: string[];
   study_roadmap: string[];
 };
+
 type AiResourcesProps = {
   aiOutput?: AIOutput;
   topic?: string;
@@ -45,8 +46,15 @@ export const AiResources = ({ aiOutput: propAiOutput, topic }: AiResourcesProps)
         });
 
         const results: AIDoc[] = response.data.ai_documentation || [];
-        console.log(results)
-        setDocs(results);
+
+        const filtered = results.filter(
+          (doc) =>
+            doc.content &&
+            doc.content !== '❌ No text in response parts.' &&
+            !doc.error?.toLowerCase().includes('empty response')
+        );
+
+        setDocs(filtered);
       } catch (err) {
         console.error('Error fetching AI documentation:', err);
       } finally {
@@ -71,29 +79,30 @@ export const AiResources = ({ aiOutput: propAiOutput, topic }: AiResourcesProps)
       {loading && <p className="text-muted-foreground">Fetching AI resources...</p>}
 
       <div className="space-y-6">
-      {docs
-    .filter((doc) => doc.content !== '❌ No text in response parts.')
-    .map((doc, idx) => (
-      <Card key={idx}>
-        <CardHeader>
-          <CardTitle className="text-xl">{doc.topic}</CardTitle>
-          <CardDescription>AI-generated explanation</CardDescription>
-        </CardHeader>
-        <CardContent>
-          {doc.error ? (
-            <p className="text-red-500 text-sm">Error: {doc.error}</p>
-          ) : (
-            <div
-              className="prose max-w-none text-sm"
-              dangerouslySetInnerHTML={{
-                __html: marked(doc.content || 'No content.'),
-              }}
-            />
-          )}
-      </CardContent>
-    </Card>
-))}
-
+        {docs.length > 0 ? (
+          docs.map((doc, idx) => (
+            <Card key={idx}>
+              <CardHeader>
+                <CardTitle className="text-xl">{doc.topic}</CardTitle>
+                <CardDescription>AI-generated explanation</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div
+                  className="prose max-w-none text-sm"
+                  dangerouslySetInnerHTML={{
+                    __html: marked(doc.content || 'No content.'),
+                  }}
+                />
+              </CardContent>
+            </Card>
+          ))
+        ) : (
+          !loading && (
+            <p className="text-muted-foreground">
+              No high-quality AI resources available for the current topics.
+            </p>
+          )
+        )}
       </div>
     </div>
   );
