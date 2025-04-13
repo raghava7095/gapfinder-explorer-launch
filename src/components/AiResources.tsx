@@ -41,7 +41,7 @@ export const AiResources = ({ aiOutput: propAiOutput, topic }: AiResourcesProps)
       setLoading(true);
 
       try {
-        const response = await axios.post('http://localhost:3000/generate-ai-docs', {
+        const response = await axios.post('https://backend-fawn-nine-74.vercel.app/generate-ai-docs', {
           topics: aiOutput.gap_topics,
         });
 
