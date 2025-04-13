@@ -38,30 +38,47 @@ type AIOutput = {
 };
 
 export const ResourcesSection = ({
-  topic,
-  aiOutput,
+  topic: propTopic,
+  aiOutput: propAiOutput,
 }: {
-  topic: string;
-  aiOutput: AIOutput;
+  topic?: string;
+  aiOutput?: AIOutput;
 }) => {
-
+  const [topic, setTopic] = useState<string>('');
+  const [aiOutput, setAiOutput] = useState<AIOutput | null>(null);
   const [videos, setVideos] = useState<Video[]>([]);
   const [docs, setDocs] = useState<Documentation[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Load from props or localStorage
+  useEffect(() => {
+    const storedTopic = localStorage.getItem("gapfinder_topic");
+    const storedAiOutput = localStorage.getItem("gapfinder_aiOutput");
+  
+    console.log("Stored AI Output:", storedAiOutput);
+  
+    const parsedOutput: AIOutput | null =
+      storedAiOutput && typeof storedAiOutput === 'string'
+        ? JSON.parse(storedAiOutput)
+        : null;
+  
+    setTopic(propTopic || storedTopic || '');
+    setAiOutput(propAiOutput || parsedOutput || null);
+  }, [propTopic, propAiOutput]);
+  
+
+  // Fetch videos/docs
   useEffect(() => {
     const fetchAllResources = async () => {
+      if (!aiOutput || !aiOutput.gap_topics?.length) return;
       setLoading(true);
       try {
-        const topics = aiOutput.gap_topics || [];
-        console.log(aiOutput.gap_topics)
+        const topics = aiOutput.gap_topics;
         const [videosRes, docsRes] = await Promise.all([
           axios.post('https://backend-fawn-nine-74.vercel.app/getvideos', { topics, max: 2 }),
           axios.post('https://backend-fawn-nine-74.vercel.app/fetch-docs', { topics }),
-        ]); 
-        console.log('Videos Response:', videosRes.data);
-        console.log('Docs Response:', docsRes.data);
-
+        ]);
+        console.log(videosRes.data)
         setVideos(videosRes.data || []);
         setDocs(docsRes.data.documentation || []);
       } catch (err) {
@@ -73,6 +90,8 @@ export const ResourcesSection = ({
 
     fetchAllResources();
   }, [aiOutput]);
+
+  if (!aiOutput) return <p className="text-muted-foreground">Loading personalized resources...</p>;
 
   return (
     <div className="space-y-6">
@@ -155,15 +174,18 @@ export const ResourcesSection = ({
                 <CardDescription>By {video.channel}</CardDescription>
               </CardHeader>
               <CardContent>
-                <img src={video.thumbnail} alt={video.title} className="rounded-lg mb-4 w-full max-w-sm" />
+  <div className="aspect-video w-full max-w-2xl">
+    <iframe
+      className="w-full h-full rounded-lg"
+      src={`https://www.youtube.com/embed/${video.videoId}`}
+      title={video.title}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" asChild>
-                  <a href={video.url} target="_blank" rel="noopener noreferrer">
-                    Watch Video
-                  </a>
-                </Button>
-              </CardFooter>
+
             </Card>
           ))}
           {videos.length === 0 && !loading && (
@@ -173,18 +195,27 @@ export const ResourcesSection = ({
 
         {/* Roadmaps */}
         <TabsContent value="roadmaps" className="space-y-4">
-          {aiOutput.study_roadmap.map((step, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>Step {index + 1}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: marked(step) }} />
-              </CardContent>
-            </Card>
-          ))}
+  {aiOutput.study_roadmap.map((step, index) => (
+    <Card key={index}>
+      <CardHeader>
+        <CardTitle>Step {index + 1}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {typeof step === 'string' ? (
+          <div
+            className="prose max-w-none"
+            dangerouslySetInnerHTML={{ __html: marked(step) }}
+          />
+        ) : (
+          <p className="text-muted-foreground">Invalid roadmap step format.</p>
+        )}
+      </CardContent>
+    </Card>
+  ))}
         </TabsContent>
+
       </Tabs>
     </div>
   );
 };
+

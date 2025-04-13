@@ -33,11 +33,17 @@ const TopicInput = () => {
       const data = await response.json();
       console.log("✅ AI Response:", data);
   
-      navigate("/results/*", {
+      // Save to localStorage
+      localStorage.setItem("gapfinder_topic", topic);
+      localStorage.setItem("gapfinder_knowledgeInput", knowledgeInput);
+      localStorage.setItem("gapfinder_aiOutput", JSON.stringify(data.output));
+  
+      // Navigate with state (used for immediate routing)
+      navigate("/results", {
         state: {
           topic,
           knowledgeInput,
-          aiOutput: data.output
+          aiOutput: data.output,
         },
       });
     } catch (err) {
@@ -46,6 +52,8 @@ const TopicInput = () => {
       setIsLoading(false);
     }
   };
+  
+  
   
 
   return (

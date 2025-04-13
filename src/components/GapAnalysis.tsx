@@ -90,7 +90,7 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
                   </TooltipProvider>
                 </div>
                 <CardDescription>
-                  Your progress in AI/ML concept mastery
+                  Your progress in {topic} concept mastery
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col items-center">

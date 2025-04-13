@@ -1,47 +1,95 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+'use client';
+
+import { useEffect, useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import axios from 'axios';
 
-export const ProjectsSection = ({ topic = 'JavaScript' }) => {
-  const projects = [
-    {
-      id: 1,
-      title: 'Build a Todo List App',
-      description: 'Create a simple todo list application using vanilla JavaScript.',
-      difficulty: 'Beginner',
-      skills: ['DOM Manipulation', 'Event Handling', 'Local Storage'],
-      url: '#',
-    },
-    {
-      id: 2,
-      title: 'Weather Dashboard',
-      description: 'Build a weather dashboard that fetches data from a weather API.',
-      difficulty: 'Intermediate',
-      skills: ['API Requests', 'Async/Await', 'Data Visualization'],
-      url: '#',
-    },
-    {
-      id: 3,
-      title: 'Full-Stack Note Taking App',
-      description: 'Develop a complete note-taking application with user authentication.',
-      difficulty: 'Advanced',
-      skills: ['Node.js', 'Express', 'MongoDB', 'Authentication'],
-      url: '#',
-    },
-  ];
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  difficulty: string;
+  skills: string[];
+  url: string;
+  topic?: string;
+  error?: string;
+};
+
+type AIOutput = {
+  all_topics: string[];
+  covered_topics: string[];
+  gap_topics: string[];
+  study_roadmap: string[];
+};
+
+type ProjectsSectionProps = {
+  aiOutput?: AIOutput;
+  topic?: string;
+};
+
+export const ProjectsSection = ({ aiOutput: propAiOutput, topic }: ProjectsSectionProps) => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [aiOutput, setAiOutput] = useState<AIOutput | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('gapfinder_aiOutput');
+    const parsed = stored ? JSON.parse(stored) : null;
+    setAiOutput(propAiOutput || parsed);
+  }, [propAiOutput]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      if (!aiOutput?.gap_topics?.length) return;
+
+      setLoading(true);
+      try {
+        const response = await axios.post('http://localhost:3000/generate-projects', {
+          topics: aiOutput.gap_topics,
+        });
+
+        const results: Project[] = response.data.projects || [];
+        setProjects(results.filter((p) => !p.error));
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, [aiOutput]);
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold mb-2">Project Ideas for {topic}</h2>
+        <h2 className="text-2xl font-bold mb-2">
+          Project Ideas{topic ? ` for ${topic}` : ''}
+        </h2>
         <p className="text-muted-foreground">
           Practice your skills by building these projects.
         </p>
       </div>
-      
+
+      {loading && <p className="text-muted-foreground">Loading project ideas...</p>}
+
       <div className="grid gap-4 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.id}>
+          <Card
+            key={project.id}
+            onClick={() => setSelectedProject(project)}
+            className="cursor-pointer hover:ring-2 ring-blue-500 transition"
+          >
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle>{project.title}</CardTitle>
@@ -54,20 +102,52 @@ export const ProjectsSection = ({ topic = 'JavaScript' }) => {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill) => (
-                  <Badge key={skill} variant="outline">{skill}</Badge>
+                  <Badge key={skill} variant="outline">
+                    {skill}
+                  </Badge>
                 ))}
               </div>
             </CardContent>
             <CardFooter>
               <Button variant="outline" asChild>
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
                   View Project Details
-                </a>
+                {/* <a href={project.url} target="_blank" rel="noopener noreferrer">
+                </a> */}
               </Button>
             </CardFooter>
           </Card>
         ))}
       </div>
+
+      {/* Modal for Selected Project */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+          <div className="bg-white dark:bg-zinc-900 rounded-xl p-6 max-w-lg w-full shadow-lg space-y-4 relative">
+            <button
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              onClick={() => setSelectedProject(null)}
+            >
+              ✕
+            </button>
+            <h3 className="text-xl font-bold">{selectedProject.title}</h3>
+            <p className="text-sm text-muted-foreground">{selectedProject.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {selectedProject.skills.map((skill) => (
+                <Badge key={skill} variant="outline">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            {/* <div className="flex justify-end">
+              <Button variant="default" asChild>
+                <a href={selectedProject.url} target="_blank" rel="noopener noreferrer">
+                  View Full Project
+                </a>
+              </Button>
+            </div> */}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

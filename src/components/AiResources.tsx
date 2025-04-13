@@ -1,61 +1,99 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Lightbulb } from 'lucide-react';
+import axios from 'axios';
+import { marked } from 'marked';
 
-export const AiResources = ({ topic = 'JavaScript' }) => {
-  const resources = [
-    {
-      id: 1,
-      title: 'Understanding Scope in JavaScript',
-      content: `Scope in JavaScript refers to the current context of code, which determines the accessibility of variables. There are three types of scope:
+type AIDoc = {
+  topic: string;
+  content?: string;
+  error?: string;
+};
 
-1. Global Scope: Variables declared outside of any function are globally scoped and can be accessed from anywhere.
+type AIOutput = {
+  all_topics: string[];
+  covered_topics: string[];
+  gap_topics: string[];
+  study_roadmap: string[];
+};
+type AiResourcesProps = {
+  aiOutput?: AIOutput;
+  topic?: string;
+};
 
-2. Function Scope: Variables declared within a function can only be accessed from within that function.
+export const AiResources = ({ aiOutput: propAiOutput, topic }: AiResourcesProps) => {
+  const [docs, setDocs] = useState<AIDoc[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [aiOutput, setAiOutput] = useState<AIOutput | null>(null);
 
-3. Block Scope: Introduced in ES6, variables declared with let and const are block-scoped, meaning they can only be accessed within the block they're defined in.
+  useEffect(() => {
+    const stored = localStorage.getItem('gapfinder_aiOutput');
+    const parsed = stored ? JSON.parse(stored) : null;
+    setAiOutput(propAiOutput || parsed);
+  }, [propAiOutput]);
 
-Understanding scope is crucial for preventing variable leaks and unexpected behavior in your applications.`,
-    },
-    {
-      id: 2,
-      title: 'Asynchronous JavaScript Explained',
-      content: `JavaScript is single-threaded, but asynchronous operations allow it to handle tasks without blocking execution. Key concepts include:
+  useEffect(() => {
+    const fetchDocs = async () => {
+      if (!aiOutput?.gap_topics?.length) return;
+      setLoading(true);
 
-1. Callbacks: Functions passed as arguments to be executed after another function completes.
+      try {
+        const response = await axios.post('http://localhost:3000/generate-ai-docs', {
+          topics: aiOutput.gap_topics,
+        });
 
-2. Promises: Objects representing the eventual completion or failure of an asynchronous operation, allowing better error handling and chaining.
+        const results: AIDoc[] = response.data.ai_documentation || [];
+        console.log(results)
+        setDocs(results);
+      } catch (err) {
+        console.error('Error fetching AI documentation:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-3. Async/Await: Syntactic sugar on top of promises, making asynchronous code look more like synchronous code.
-
-These patterns are essential for handling operations like API calls, timers, and event handlers efficiently.`,
-    },
-  ];
+    fetchDocs();
+  }, [aiOutput]);
 
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-2">
-        <h2 className="text-2xl font-bold">AI-Generated Resources for {topic}</h2>
+        <h2 className="text-2xl font-bold">AI-Generated Resources</h2>
         <Lightbulb className="h-5 w-5 text-yellow-500" />
       </div>
-      
+
       <p className="text-muted-foreground">
-        Custom explanations generated based on your knowledge gaps.
+        Custom explanations generated for your knowledge gaps.
       </p>
-      
+
+      {loading && <p className="text-muted-foreground">Fetching AI resources...</p>}
+
       <div className="space-y-6">
-        {resources.map((resource) => (
-          <Card key={resource.id}>
-            <CardHeader>
-              <CardTitle className="text-xl">{resource.title}</CardTitle>
-              <CardDescription>AI-generated explanation</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="whitespace-pre-line text-sm">
-                {resource.content}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+      {docs
+    .filter((doc) => doc.content !== '❌ No text in response parts.')
+    .map((doc, idx) => (
+      <Card key={idx}>
+        <CardHeader>
+          <CardTitle className="text-xl">{doc.topic}</CardTitle>
+          <CardDescription>AI-generated explanation</CardDescription>
+        </CardHeader>
+        <CardContent>
+          {doc.error ? (
+            <p className="text-red-500 text-sm">Error: {doc.error}</p>
+          ) : (
+            <div
+              className="prose max-w-none text-sm"
+              dangerouslySetInnerHTML={{
+                __html: marked(doc.content || 'No content.'),
+              }}
+            />
+          )}
+      </CardContent>
+    </Card>
+))}
+
       </div>
     </div>
   );

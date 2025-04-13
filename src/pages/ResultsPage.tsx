@@ -21,19 +21,36 @@ const ResultsPage = () => {
   useEffect(() => {
     const state = location.state as { topic?: string; knowledgeInput?: string; aiOutput?: any } | null;
 
+    const storedTopic = localStorage.getItem("gapfinder_topic");
+    const storedKnowledge = localStorage.getItem("gapfinder_knowledgeInput");
+    const storedOutput = localStorage.getItem("gapfinder_aiOutput");
+
+    // Prefer state from navigation; fallback to localStorage if reloaded
     if (state?.topic) {
       setTopic(state.topic);
-    } else {
-      setTopic('JavaScript');
-      setShowPlaceholder(true);
+      localStorage.setItem("gapfinder_topic", state.topic);
+    } else if (storedTopic) {
+      setTopic(storedTopic);
+      setShowPlaceholder(true); // fallback mode
     }
 
     if (state?.knowledgeInput) {
       setKnowledge(state.knowledgeInput);
+      localStorage.setItem("gapfinder_knowledgeInput", state.knowledgeInput);
+    } else if (storedKnowledge) {
+      setKnowledge(storedKnowledge);
     }
 
     if (state?.aiOutput) {
       setAiOutput(state.aiOutput);
+      localStorage.setItem("gapfinder_aiOutput", JSON.stringify(state.aiOutput));
+    } else if (storedOutput) {
+      try {
+        setAiOutput(JSON.parse(storedOutput));
+        setShowPlaceholder(true); // fallback mode
+      } catch (err) {
+        console.error("❌ Failed to parse stored AI output", err);
+      }
     }
   }, [location.state]);
 
@@ -58,22 +75,22 @@ const ResultsPage = () => {
           </Button>
         </div>
 
-        {showPlaceholder && (
+        {/* {showPlaceholder && (
           <Alert className="mb-6">
             <AlertCircle className="h-4 w-4" />
             <AlertTitle>Demo Mode</AlertTitle>
             <AlertDescription>
-              You're viewing sample data. Start a real analysis from the homepage.
+              You're viewing saved data from your last session. To start fresh, go back to the homepage.
             </AlertDescription>
           </Alert>
-        )}
+        )} */}
 
         <Routes>
-          <Route path="/" element={<GapAnalysis topic={topic} knowledge={knowledge}  aiOutput={aiOutput}  />} />
+          <Route path="/" element={<GapAnalysis topic={topic} knowledge={knowledge} aiOutput={aiOutput} />} />
           <Route path="/resources" element={<ResourcesSection topic={topic} aiOutput={aiOutput} />} />
           <Route path="/projects" element={<ProjectsSection topic={topic} />} />
-          <Route path="/ai-resources" element={<AiResources topic={topic}  />} />
-          <Route path="/interview-questions" element={<InterviewQuestions topic={topic}  />} />
+          <Route path="/ai-resources" element={<AiResources topic={topic} />} />
+          <Route path="/interview-questions" element={<InterviewQuestions topic={topic} />} />
           <Route path="*" element={<Navigate to="/results" replace />} />
         </Routes>
       </div>
