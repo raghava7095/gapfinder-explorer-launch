@@ -1,18 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
-import { 
-  BookOpen, 
-  Trophy, 
-  CheckCircle, 
-  XCircle, 
-  Info 
-} from 'lucide-react';
+import { BookOpen, Trophy, CheckCircle, XCircle, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
+import {
   Tooltip as UITooltip,
   TooltipContent,
   TooltipProvider,
@@ -28,9 +22,25 @@ type GapAnalysisProps = {
 export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) => {
   const [activeTab, setActiveTab] = useState('overview');
 
-  // Extract topics from aiOutput (fallback to empty array if undefined)
-  const knownConcepts = aiOutput?.covered_topics || [];
-  const gapsToExplore = aiOutput?.gap_topics || [];
+  const originalKnown = aiOutput?.covered_topics || [];
+  const originalGaps = aiOutput?.gap_topics || [];
+
+  const [knownConcepts, setKnownConcepts] = useState<string[]>([]);
+  const [gapsToExplore, setGapsToExplore] = useState<string[]>([]);
+
+  useEffect(() => {
+    setKnownConcepts(originalKnown);
+    setGapsToExplore(originalGaps);
+  }, [topic, aiOutput]);
+
+  const handleMarkAsLearned = (index: number) => {
+    const learnedTopic = gapsToExplore[index];
+    setKnownConcepts(prev => [...prev, learnedTopic]);
+    setGapsToExplore(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const total = knownConcepts.length + gapsToExplore.length;
+  const percentageKnown = total === 0 ? 0 : Math.round((knownConcepts.length / total) * 100);
 
   const data = [
     { name: 'Known', value: knownConcepts.length },
@@ -39,12 +49,8 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
 
   const COLORS = ['#4C6EF5', '#E0E0E0'];
 
-  const percentageKnown = Math.round(
-    (knownConcepts.length / (knownConcepts.length + gapsToExplore.length)) * 100
-  );
-
   const CustomTooltip = ({ active, payload }: any) => {
-    if (active && payload && payload.length) {
+    if (active && payload?.length) {
       return (
         <div className="bg-white p-3 shadow-lg rounded-lg border border-gray-200 dark:bg-slate-800 dark:border-gray-600">
           <p className="font-medium text-gray-800 dark:text-white">{`${payload[0].name} : ${payload[0].value}`}</p>
@@ -68,7 +74,6 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
 
         <TabsContent value="overview" className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Chart Section */}
             <Card className="md:col-span-2">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -111,9 +116,9 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
                         stroke="#fff"
                       >
                         {data.map((entry, index) => (
-                          <Cell 
-                            key={`cell-${index}`} 
-                            fill={COLORS[index % COLORS.length]} 
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={COLORS[index % COLORS.length]}
                             className="hover:opacity-90 transition-opacity"
                           />
                         ))}
@@ -126,27 +131,28 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
                   <div className="flex justify-center gap-8 mt-4 w-full">
                     <div className="flex items-center gap-2">
                       <span className="h-3 w-3 rounded-full bg-indigo-500"></span>
-                      <span className="text-sm font-medium dark:text-white">{knownConcepts.length} Known</span>
+                      <span className="text-sm font-medium dark:text-white">
+                        {knownConcepts.length} Known
+                      </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="h-3 w-3 rounded-full bg-gray-200"></span>
-                      <span className="text-sm font-medium dark:text-white">{gapsToExplore.length} Gaps</span>
+                      <span className="text-sm font-medium dark:text-white">
+                        {gapsToExplore.length} Gaps
+                      </span>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Progress Section */}
             <Card>
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
                   <Trophy className="h-5 w-5 text-amber-500" />
                   Learning Progress
                 </CardTitle>
-                <CardDescription>
-                  Your learning journey stats
-                </CardDescription>
+                <CardDescription>Your learning journey stats</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
@@ -173,7 +179,6 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
             </Card>
           </div>
 
-          {/* Known Concepts & Gaps */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardHeader className="pb-3">
@@ -188,8 +193,8 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
               <CardContent>
                 <ul className="space-y-1">
                   {knownConcepts.map((item, index) => (
-                    <li 
-                      key={index} 
+                    <li
+                      key={index}
                       className="flex items-center gap-2 p-2 rounded-md hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
                     >
                       <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
@@ -213,15 +218,22 @@ export const GapAnalysis = ({ topic, knowledge, aiOutput }: GapAnalysisProps) =>
               <CardContent>
                 <ul className="space-y-1 max-h-[350px] overflow-y-auto pr-2">
                   {gapsToExplore.map((item, index) => (
-                    <li 
-                      key={index} 
+                    <li
+                      key={index}
                       className="flex items-center justify-between p-2 rounded-md hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
                     >
                       <div className="flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-red-500"></span>
                         <span className="text-slate-700 dark:text-white">{item}</span>
                       </div>
-                  
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="text-xs"
+                        onClick={() => handleMarkAsLearned(index)}
+                      >
+                        Mark as Learned
+                      </Button>
                     </li>
                   ))}
                 </ul>
